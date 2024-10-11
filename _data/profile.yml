@@ -1,5 +1,5 @@
 primary_name: "Yaohui Han"
-secondary_name: ""
+secondary_name: "韩耀辉"
 navbar_name: "Yaohui Han"
 
 positions:
@@ -27,6 +27,11 @@ portrait_caption: >-
   Photo taken by Anchen
 
 education:
+- name: Chinese University of Hong Kong
+  logo: /assets/images/badges/CUHK.svg
+  position: Ph.D. in Computer Science and Engineering
+  date: Sep. 2025 - Present
+
 - name: Central South University
   logo: /assets/images/badges/CSU.svg
   position: B.Sc. in Applied Physics
