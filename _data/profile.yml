@@ -19,9 +19,9 @@ linkedin: yaohui-han-379079325
 orcid: 0009-0007-2201-7283
 
 short_bio: | 
-  Hi! I am Yunrui Zhang (张芸睿), an incoming ECE Ph.D. student at Cornell University. I obtained my bachelor's degree at Tsinghua University, where I was very fortunate to be advised by Prof. Gangtie Zheng, Prof. Mingguo Zhao and Prof. Rebing Wu. <br>
-  My research interests lie broadly in the intersection of machine learning and advanced healthcare, including Magnetic Resonance Imaging (MRI)🧠, multi-modal medical imaging and surgical robotics🦾. <br>
-  During my leisure time, I am an enthusiast of classic Chinese literature & poetry 📜, fiction 📖, piano 🎹 and musicals 🎶. 
+  Hi! I am Yaohui Han (韩耀辉), a final year undergraduate student at [Central South University](https://en.csu.edu.cn/), supervised by [Prof. Anfeng Liu](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/index.htm).<br>
+  From Feb. 2024, I joined [Prof. Tinghuan Chen](https://mypage.cuhk.edu.cn/academics/chentinghuan/)'s group at [CUHK-Shenzhen](https://www.cuhk.edu.cn/en). Currently, I am an RA at [HKUST(GZ)](https://www.hkust-gz.edu.cn/), supervised by [Prof. Yuzhe Ma](https://www.yuzhe-ma.com/).<br>
+  During the past years at the university, I have actively participated in several projects and competitions. My research interests include Electronic Design Automation and Machine Learning.
 
 portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
@@ -37,18 +37,18 @@ experience:
 - name: Chinese University of Hong Kong
   logo: /assets/images/badges/CUHK.svg
   position: Research Assistant
-  date: Jul. 2023 - Sep. 2023
+  date: Feb. 2024 - Present
 
 - name: Hong Kong University of Science and Technology
   logo: /assets/images/badges/HKUST.svg
   position: Research Assistant
-  date: Jul. 2023 - Sep. 2023
+  date: Jun. 2024 - Present
 
 
 awards:
-- name: Tsinghua Innovation Award of Science and Technology
-  date: 2023, 2022
-- name: First Prize in Beijing Challenge Cup
+- name: Silver Medal, Kaggle Competition
   date: 2023
-- name: Tsinghua Award of Outstanding Public Service
-  date: 2022
+- name: National 1st Prize, National Electronics Design Competition
+  date: 2023
+- name: National 1st Prize, National Physics Experiment Competition
+  date: 2023
