@@ -39,12 +39,12 @@ education:
 experience:
 - name: Chinese University of Hong Kong
   logo: /assets/images/badges/CUHK.svg
-  position: R.A., advised by <a href="https://mypage.cuhk.edu.cn/academics/chentinghuan/">Prof. Tinghuan Chen</a>
+  position: RA, advised by <a href="https://mypage.cuhk.edu.cn/academics/chentinghuan/">Prof. Tinghuan Chen</a>
   date: Feb. 2024 - Present
 
 - name: Hong Kong University of Science and Technology
   logo: /assets/images/badges/HKUST.svg
-  position: R.A., advised by <a href="https://www.yuzhe-ma.com/">Prof. Yuzhe Ma</a>
+  position: RA, advised by <a href="https://www.yuzhe-ma.com/">Prof. Yuzhe Ma</a>
   date: Jun. 2024 - Present
 
 
