@@ -1,22 +1,22 @@
-primary_name: "Yunrui Zhang"
-secondary_name: "张芸睿"
-navbar_name: "Yunrui Zhang"
+primary_name: "Yaohui Han"
+secondary_name: ""
+navbar_name: "Yaohui Han"
 
 positions:
-- name: Incoming ECE Ph.D. Student @ Cornell University
-- logo: /assets/images/badges/Tsinghua_University_Logo.svg
-  name: B.Eng., Tsinghua University (2024)
+- name: Incoming Ph.D. Student @ CUHK
+- logo: /assets/images/badges/CUHK.svg
+  name: Chinese University of Hong Kong
 
-email: "yz3275@cornell.edu"
+email: "yhhan.shiny@gmail.com"
 # cv_link: link-to-your-cv-file
-gscholar: GMhO86wAAAAJ
-github: Kyrrego
+gscholar: WPNvcXMAAAAJ
+github: Han-0107
 # twitter: your_twitter_id
 wechat_qrcode: /assets/images/etc/wechat_qr.JPG
 wechat_prompt: >-
-  Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my WeChat. Thanks!
-linkedin: yunrui-zhang-5b465b279
-# orcid: 0000-0000-0000-0000
+  Please tell me your <strong>name</strong> and <strong>affiliation</strong> when adding my WeChat. Thanks!
+linkedin: yaohui-han-379079325
+orcid: 0009-0007-2201-7283
 
 short_bio: | 
   Hi! I am Yunrui Zhang (张芸睿), an incoming ECE Ph.D. student at Cornell University. I obtained my bachelor's degree at Tsinghua University, where I was very fortunate to be advised by Prof. Gangtie Zheng, Prof. Mingguo Zhao and Prof. Rebing Wu. <br>
@@ -28,15 +28,20 @@ portrait_caption: >-
   Photo taken in Jun 2024 with <a href="https://giddazhang.github.io/">Jida</a>.
 
 education:
-- name: Tsinghua University
-  logo: /assets/images/badges/Tsinghua_University_Logo.svg
-  position: B.Eng. in Automation
-  date: Sep. 2020 - Jun. 2024
+- name: Central South University
+  logo: /assets/images/badges/CSU.svg
+  position: B.Sc. in Applied Physics
+  date: Sep. 2021 - Jun. 2025
 
 experience:
-- name: University of Illinois at Urbana-Champaign
-  logo: /assets/images/badges/UIUC_seal.png
-  position: Summer Research Intern
+- name: Chinese University of Hong Kong
+  logo: /assets/images/badges/CUHK.svg
+  position: Research Assistant
+  date: Jul. 2023 - Sep. 2023
+
+- name: Hong Kong University of Science and Technology
+  logo: /assets/images/badges/HKUST.svg
+  position: Research Assistant
   date: Jul. 2023 - Sep. 2023
 
 
