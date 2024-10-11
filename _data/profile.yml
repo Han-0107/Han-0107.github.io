@@ -3,7 +3,7 @@ secondary_name: ""
 navbar_name: "Yaohui Han"
 
 positions:
-- name: Incoming Ph.D. Student @ CUHK
+- name: Incoming Ph.D. Student @ CSE, CUHK
 - logo: /assets/images/badges/CUHK.svg
   name: Chinese University of Hong Kong
 
@@ -46,9 +46,9 @@ experience:
 
 
 awards:
-- name: Silver Medal, Kaggle Competition
+- name: <b>Silver Medal<b>, Kaggle Competition
   date: 2023
-- name: National 1st Prize, National Electronics Design Competition
+- name: <b>National 1st Prize<b>, National Electronics Design Competition
   date: 2023
-- name: National 1st Prize, National Physics Experiment Competition
+- name: <b>National 1st Prize<b>, National Physics Experiment Competition
   date: 2023
