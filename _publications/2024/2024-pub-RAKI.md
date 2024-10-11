@@ -1,21 +1,25 @@
 ---
-title:          "A (k,t)-RAKI Method for Interpolating Sparse Data in Accelerated MRSI Acquisitions"
-date:           2024-05-08
+title:          "Selecting workers like expert for crowdsourcing by integration evaluation of individual and collaborative abilities"
+date:           2024-06-12
 selected:       true
-pub:            "International Society of Magnetic Resonance in Medicine (ISMRM)"
+pub:            "Expert Systems With Applications (ESWA)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Power Pitch</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Internet of Things</span>'
 pub_date:       "2024"
 
 abstract: >-
-  In this work, we adapted and extended the self-supervised learning-based RAKI method by incorporating the FID dimension into a 3D, complex-valued convolutional network, for MRSI reconstruction. We improved the design by training a single network to handle multi-coil data simultaneously instead of the coil-by-coil interpolation in the original RAKI method. We demonstrate reduced aliasing by the proposed method and consequently improved spatiospectral processing results, using in vivo 1H-MRSI data.
-cover:          /assets/images/covers/cover_RAKI.png
+  We propose an Integration of Individual and Collaborative Abilities based Dynamic Worker Selection (IICA-DWS) algorithm to recruit excellent workers as a team in a high-quality and low-cost style. In the IICA-DWS algorithm, each worker’s individual ability and collaborative contribution to the team are evaluated more accurately using the Approximate Shapley Value (ASV). In addition, a high-quality team formation method is established to complete complex tasks at low cost. This involves the selection of both team leaders and team members. In this process, the Multi-Armed Bandit (MAB) model is adopted to dynamically select excellent workers using exploration and exploitation phases. Lastly, the IICA-DWS algorithm is evaluated through theoretical analysis and experimental results.
+cover:          /assets/images/covers/ESWA24.png
 authors:
-  - Yunrui Zhang
-  - Ruiyang Zhao
-  - Zepeng Wang
+  - Yaohui Han
+  - Mingyang Zhao
+  - Nuanqiao Shan
+  - Anfeng Liu
+  - Tian Wang
+  - Houbing Song
+  - Shaobo Zhang
 links:
-  Code: https://github.com/Kyrrego/k-t-RAKI/tree/main
-  Paper: /assets/images/files/ISMRM24_ktRAKI_final.pdf
+  Code: https://github.com/Han-0107/mcspy
+  Paper: /assets/images/files/ESWA24.pdf
 ---
