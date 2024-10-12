@@ -14,6 +14,7 @@ github: Han-0107
 # twitter: your_twitter_id
 wechat_qrcode: /assets/images/etc/wechat_qr.jpg
 wechat_prompt: >-
+  请在添加微信好友时，附上您的<strong>姓名</strong>和<strong>机构</strong>，谢谢！
   Please tell me your <strong>name</strong> and <strong>affiliation</strong> when adding my WeChat. Thanks!
 # linkedin: yaohui-han-379079325
 # orcid: 0009-0007-2201-7283
