@@ -38,8 +38,16 @@
                     {% endif %}
         
                 </div>
+                <!-- <p class="text-profile-address">
+                    <i class="fas fa-map-marker-alt"></i> {{ site.data.profile.address }} 
+                </p> -->
+                <hr />
                 <div class="row">
                     <div class="col">
+                        <p class="text-profile-address">
+                            <i class="fas fa-map-marker-alt"></i> {{ site.data.profile.address }} <br/>
+                        </p>
+                        
                         <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email | encode_email }}">
                             <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
                         </a>
