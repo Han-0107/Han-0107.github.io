@@ -5,7 +5,7 @@ selected:       true
 pub:            "Expert Systems With Applications (ESWA)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-info">ESWA</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Journal</span>'
 pub_date:       "2024"
 
 abstract: >-
