@@ -3,9 +3,8 @@ secondary_name: ""
 navbar_name: "Yaohui Han"
 
 positions:
-- name: <em>Incoming Ph.D. Student @ CSE, CUHK</em>
 - logo: /assets/images/badges/CUHK.svg
-  name: Chinese University of Hong Kong
+  name: <strong>Incoming Ph.D. Student, @ Chinese University of Hong Kong</strong>
 
 email: "yhhan.shiny@gmail.com"
 cv_link: /assets/images/files/CV_Yaohui.pdf
