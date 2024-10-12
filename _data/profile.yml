@@ -28,7 +28,9 @@ portrait_caption: >-
 education:
 - name: Chinese University of Hong Kong
   logo: /assets/images/badges/CUHK.svg
-  position: Ph.D. in Computer Science and Engineering
+  position: >- 
+    Ph.D. in Computer Science and Engineering</br>
+    <b>Supervisor</b>: <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a>
   date: Sep. 2025 - Present
 
 - name: Central South University
