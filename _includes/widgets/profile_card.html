@@ -47,9 +47,9 @@
                         <p class="text-profile-address">
                             <i class="fas fa-map-marker-alt"></i> {{ site.data.profile.address }} <br/>
                         </p>
-                        
+
                         <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
+                            <i class="fas fa-envelope"></i> <span class="email-text">{{ site.data.profile.email}}</span>
                         </a>
 
                         {% if site.data.profile.gscholar %}
