@@ -35,7 +35,9 @@ education:
 
 - name: Central South University
   logo: /assets/images/badges/CSU.svg
-  position: B.Sc. in Applied Physics
+  position: >-
+    B.Sc. in Applied Physics (Major)
+    B.Sc. in Electronic Science and Technology (Minor)
   date: Sep. 2021 - Jun. 2025
 
 experience:
