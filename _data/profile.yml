@@ -65,9 +65,9 @@ services:
   date: 2021-Present
 
 awards:
-- name: <strong>Silver Medal</strong>, Kaggle Competition
+- name: <strong>Silver Medal</strong>, Kaggle Competition <small><a href="/assets/images/photos/kaggle1.jpg">[Certificate]</a></small>
   date: 2023
-- name: <strong>National 1st Prize</strong>, Chinese Electronics Design Contest
+- name: <strong>National 1st Prize</strong>, Chinese Electronics Design Contest <small><a href="/assets/images/photos/CEDC.jpg">[Certificate]</a></small>
   date: 2023
 - name: <strong>National 1st Prize</strong>, Chinese Physics Experiment Contest
   date: 2023
