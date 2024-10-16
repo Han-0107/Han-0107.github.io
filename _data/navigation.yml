@@ -4,4 +4,4 @@ pages:
 - name: Publications
   url: /publications
 - name: Calendar
-  url: https://yhhan.netlify.app/
+  url: /calendar
