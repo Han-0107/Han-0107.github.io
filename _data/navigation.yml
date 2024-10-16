@@ -3,5 +3,5 @@ pages:
   url: /
 - name: Publications
   url: /publications
-- name: Teaching
-  url: /teaching
+- name: Calendar
+  url: https://yhhan.netlify.app/
