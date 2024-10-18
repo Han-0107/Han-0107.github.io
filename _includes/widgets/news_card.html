@@ -11,7 +11,7 @@
                 {% for item in year.items %}
                 <div class="my-1">
                     {{ item.title }}
-                    <div class="float-right text-muted"><i>{{ item.date | date: "%b %d" }}</i></div>
+                    <div class="float-right text-muted"><i>{{ item.date | date: "%b" }}</i></div>
                 </div>
                 {% endfor %}
             </div>
