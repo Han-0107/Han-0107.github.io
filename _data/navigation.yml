@@ -5,3 +5,5 @@ pages:
   url: /publications
 - name: Calendar
   url: /calendar
+- name: Teaching
+  url: /presentations
