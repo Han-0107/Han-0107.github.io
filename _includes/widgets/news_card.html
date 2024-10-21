@@ -1,21 +1,125 @@
-{% assign news_by_year = site.news | sort: "date" | reverse | limit: 3 | group_by_exp: "item", "item.date | date: '%Y'" -%}
+{% assign all_news = site.news | sort: "date" | reverse %} <!-- This now includes news from subfolders -->
+{% assign news_by_year = all_news | group_by_exp: "item", "item.date | date: '%Y'" -%}
+{% assign recent_news_limit = include.limit | default: 5 %} <!-- Set your news limit here -->
 
 <div class="my-3 bg-white shadow-sm rounded-sm">
-    <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-rss"></i> News</h6>
-    <div class="px-3 pb-1">
+    <!-- Flex container for heading and year buttons -->
+    <div class="d-flex justify-content-between align-items-center p-3 mb-0 border-bottom border-gray">
+        <h6 class="mb-0"><i class="fas fa-rss"></i> News </h6>
+        
+        <!-- Year Selection Buttons -->
+        <!-- Button generation for the last two years and older news -->
+        <div id="news-filter" class="d-flex align-items-center flex-wrap">
+            <!-- Most Recent Button -->
+            <button class="btn btn-outline-primary mr-2 btn-sm" onclick="filterNews('recent', '{{ recent_news_limit }}')">Recent</button>
+        
+            {% assign current_year = 'now' | date: "%Y" %}
+            {% assign recent_years = current_year | minus: 1 %}
+            
+            <!-- Generate buttons for the last two years dynamically -->
+            <button class="btn btn-outline-primary mr-2 btn-sm" onclick="filterNews('{{ current_year }}')">{{ current_year }}</button>
+            <button class="btn btn-outline-primary mr-2 btn-sm" onclick="filterNews('{{ recent_years }}')">{{ recent_years }}</button>
+        
+            <!-- Button for older news -->
+            <button class="btn btn-outline-primary mr-2 btn-sm" onclick="filterNews('older')">Pre-{{ recent_years }}</button>
+        </div>
+    </div>
+
+    <!-- News Listing -->
+    <div id="news-container" class="px-3 pb-1">
         {% for year in news_by_year %}
-        <div class="media py-1 {% if not_first -%}border-top border-gray{%- endif %}">
-            {% assign not_first = true %}
-            <div class="mr-3 text-muted my-1">{{ year.name }}</div>
-            <div class="media-body">
-                {% for item in year.items %}
-                <div class="my-1">
-                    {{ item.title }}
-                    <div class="float-right text-muted"><i>{{ item.date | date: "%b %d" }}</i></div>
+        <div class="news-year" data-year="{{ year.name }}">
+            <div class="media py-1 {% if not_first -%}border-top border-gray{% endif %}">
+                {% assign not_first = true %}
+                <div class="mr-3 text-muted my-1">{{ year.name }}</div>
+                <div class="media-body">
+                    {% for item in year.items %}
+                    <div class="my-1 d-flex news-item">
+                        <div>{{ item.title }}</div>
+                        <div class="ml-auto mt-auto text-muted no-break"><i>{{ item.date | date: "%b" }}</i></div>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
+
+<script>
+    // Helper function to get the current year
+    function getCurrentYear() {
+        return new Date().getFullYear();
+    }
+    
+    function filterNews(selectedYear, limit) {
+        var newsYears = document.querySelectorAll('.news-year');
+        var totalDisplayed = 0;
+    
+        if (selectedYear === 'recent') {
+            // Iterate through each year and each item inside those years
+            newsYears.forEach(function(newsYear) {
+                var items = newsYear.querySelectorAll('.news-item');
+                var yearHasVisibleItems = false;
+    
+                // Check each news item within the current year
+                items.forEach(function(newsItem) {
+                    if (totalDisplayed < limit) {
+                        newsItem.style.display = 'block';
+                        totalDisplayed++;
+                        yearHasVisibleItems = true;
+                    } else {
+                        newsItem.setAttribute('style', 'display: none !important;');
+                    }
+                });
+    
+                // Show the year if any items were displayed from it
+                newsYear.style.display = yearHasVisibleItems ? 'block' : 'none';
+            });
+        } else if (selectedYear === 'older') {
+            // Show all news items that are older than the two most recent years
+            newsYears.forEach(function(newsYear) {
+                var year = parseInt(newsYear.getAttribute('data-year'));
+                var currentYear = getCurrentYear();
+                if (year <= currentYear - 2) {
+                    newsYear.style.display = 'block'; // Show older news years
+                    var items = newsYear.querySelectorAll('.news-item');
+                    items.forEach(function(newsItem) {
+                        newsItem.style.display = 'block'; // Show all items in older years
+                    });
+                } else {
+                    newsYear.style.display = 'none'; // Hide recent years
+                }
+            });
+        } else {
+            // Show all news items from the selected year, hide others
+            newsYears.forEach(function(newsYear) {
+                var items = newsYear.querySelectorAll('.news-item');
+                if (newsYear.getAttribute('data-year') === selectedYear) {
+                    newsYear.style.display = 'block'; // Show the selected year
+                    items.forEach(function(newsItem) {
+                        newsItem.style.display = 'block'; // Show all items in the selected year
+                    });
+                } else {
+                    newsYear.style.display = 'none'; // Hide other years
+                }
+            });
+        }
+    }
+    
+    // Trigger "Most Recent" filter on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        filterNews('recent', '{{ recent_news_limit }}');
+    });
+</script>
+
+    
+<style>
+    /* Custom scaling for extra-small devices */
+    @media (max-width: 576px) {
+        #news-filter button {
+            font-size: 0.75rem; /* Adjust font size for mobile */
+            padding: 0.25rem 0.5rem; /* Adjust padding for mobile */
+        }
+    }
+</style>
