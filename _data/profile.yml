@@ -67,6 +67,8 @@ services:
 awards:
 - name: <strong>Silver Medal</strong>, Kaggle Competition
   date: 2023
+- name: <strong>Bronze Medal</strong>, NeurIPS 2024 Competition
+  date: 2024
 - name: <strong>National 1st Prize</strong>, Chinese Electronics Design Contest
   date: 2023
 - name: <strong>National 1st Prize</strong>, Chinese Physics Experiment Contest
