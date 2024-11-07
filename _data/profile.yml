@@ -65,15 +65,11 @@ services:
   date: 2021-Present
 
 awards:
-- name: <strong>Silver Medal</strong>, Kaggle Competition
-  date: 2023
+- name: <strong>National Scholarship</strong>, P.R. China
+  date: 2024
 - name: <strong>Bronze Medal</strong>, NeurIPS 2024 Competition
   date: 2024
+- name: <strong>Silver Medal</strong>, Kaggle Competition
+  date: 2023
 - name: <strong>National 1st Prize</strong>, Chinese Electronics Design Contest
   date: 2023
-- name: <strong>National 1st Prize</strong>, Chinese Physics Experiment Contest
-  date: 2023
-- name: <strong>Scholarship for Innovation</strong>, GEM Co.,Ltd
-  date: 2023
-- name: <strong>BYD Special Scholarship</strong>, BYD Co.,Ltd
-  date: 2024
