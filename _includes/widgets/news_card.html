@@ -1,6 +1,6 @@
 {% assign all_news = site.news | sort: "date" | reverse %} <!-- This now includes news from subfolders -->
 {% assign news_by_year = all_news | group_by_exp: "item", "item.date | date: '%Y'" -%}
-{% assign recent_news_limit = include.limit | default: 3 %} <!-- Set your news limit here -->
+{% assign recent_news_limit = include.limit | default: 5 %} <!-- Set your news limit here -->
 
 <div class="my-3 bg-white shadow-sm rounded-sm">
     <!-- Flex container for heading and year buttons -->
