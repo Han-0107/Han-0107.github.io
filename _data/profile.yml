@@ -56,9 +56,13 @@ experience:
     <b>Supervisor</b>: <a href="https://www.yuzhe-ma.com/">Prof. Yuzhe Ma</a>
   date: Jun. 2024 - Dec. 2024
 
-services:
-- name: <b>Conference Reviewer</b>, International Joint Conference on Neural Networks (IJCNN)
+conference_review:
+- name: International Joint Conference on Neural Networks (IJCNN)
   date: 2025
+
+journal_review:
+- name: International Joint Conference on Neural Networks (IJCNN)
+  date: 2024
 
 awards:
 - name: <strong>National Scholarship</strong>, Education Ministry of PRC
