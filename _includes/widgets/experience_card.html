@@ -74,14 +74,12 @@
                         <div class="col-md-6">
                             <div class="mx-2 my-1">
                                 <h6>Academic Services</h6>
-                                <!-- 修改 Conference Review 的标签，将其字体大小设置为小一些 -->
                                 <h6 style="font-size: 0.875rem;">Conference Review</h6>
                                 <ul class="list small pl-3 mb-1">
                                     {% for item in site.data.profile.conference_review %}
                                     <li>
                                         <div class="d-flex">
                                             <div>{{ item.name }}</div>
-                                            <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
                                         </div>
                                     </li>
                                     {% endfor %}
@@ -92,7 +90,6 @@
                                     <li>
                                         <div class="d-flex">
                                             <div>{{ item.name }}</div>
-                                            <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
                                         </div>
                                     </li>
                                     {% endfor %}
