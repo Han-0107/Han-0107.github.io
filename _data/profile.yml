@@ -32,7 +32,7 @@ education:
   position: >- 
     Ph.D. in Computer Science and Engineering</br>
     <b>Supervisor</b>: <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a>
-  date: Sep. 2025 - Jun. 2029
+  date: Aug. 2025 - Jun. 2029
 
 - name: Central South University
   logo: /assets/images/badges/CSU.svg
@@ -57,6 +57,7 @@ experience:
   date: Jun. 2024 - Dec. 2024
 
 conference_review:
+- name: International Conference on Learning Representations (ICLR)
 - name: International Joint Conference on Neural Networks (IJCNN)
 
 journal_review:
