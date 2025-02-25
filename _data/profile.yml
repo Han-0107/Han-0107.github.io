@@ -63,6 +63,9 @@ conference_review:
 journal_review:
 - name: IEEE Transactions on Networking (TNET)
 - name: IEEE Transactions on Services Computing (TSC)
+# - name: Expert Systems With Applications (ESWA)
+# - name: Information Sciences (INS)
+# - name: Knowledge-Based Systems (KBS)
 
 awards:
 - name: <strong>National Scholarship</strong>, Education Ministry of PRC
