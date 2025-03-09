@@ -2,7 +2,7 @@
 show: true
 width: 6
 date: 2021-09-12 00:01:00 +0800
-height: auto
+height: 295px
 images:
 - src: https://picsum.photos/seed/first1111/800/800
   title: Photo 1
