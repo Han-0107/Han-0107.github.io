@@ -63,13 +63,16 @@ conference_review:
   date: 2025
 
 journal_review:
-- name: IEEE Transactions on Networking (TNET)
+# - name: IEEE Transactions on Networking (TNET)
+#   date: 2024
+# - name: IEEE Transactions on Services Computing (TSC)
+#   date: 2024
+- name: Expert Systems With Applications (ESWA)
   date: 2024
-- name: IEEE Transactions on Services Computing (TSC)
+- name: Information Sciences (INS)
   date: 2024
-# - name: Expert Systems With Applications (ESWA)
-# - name: Information Sciences (INS)
-# - name: Knowledge-Based Systems (KBS)
+- name: Knowledge-Based Systems (KBS)
+  date: 2024
 
 awards:
 - name: <strong>National Scholarship</strong>, Education Ministry of PRC
