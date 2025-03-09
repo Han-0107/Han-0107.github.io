@@ -3,10 +3,8 @@ show: true
 width: 12
 date: 2024-01-12 00:01:00 +0800
 ---
-<div>
-  <img data-src="{{ 'assets/images/covers/cover1.jpg' | relative_url }}" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
 
-  <div class="card-img-overlay" style="overflow: scroll; background: rgb(255,255,255,0.8)">
+<div class="p-4">
     <h2>Welcome to Showcase!</h2>
     <hr />
     <p>
@@ -21,5 +19,5 @@ date: 2024-01-12 00:01:00 +0800
     </p>
     <p>
         For a tidy layout, it is recommended to set the width of the cards to be either multiple of 3 or multiple of 4 for all cards, except for small badges that do not take up much space (width=1).
-  </div>
+    </p>
 </div>
