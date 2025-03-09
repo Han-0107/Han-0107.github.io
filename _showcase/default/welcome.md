@@ -3,7 +3,7 @@ show: true
 width: 12
 date: 2024-01-12 00:01:00 +0800
 ---
-<div class="card h-100">
+<div class="card">
   <img src="{{ '/assets/images/empty_300x200.png' | relative_url }}" 
        data-src="{{ 'assets/images/covers/cover1.jpg' | relative_url }}" 
        class="lazy w-100 rounded-sm"
