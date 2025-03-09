@@ -9,7 +9,7 @@ date: 2024-01-12 00:01:00 +0800
        class="lazy w-100 rounded-sm"
        loading="lazy">
 
-  <div class="card-img-overlay" style="overflow-y: auto; max-height: 300px; background: rgba(255,255,255,0.8)">
+  <div class="card-img-overlay" style="overflow-y: auto; max-height: 100px; background: rgba(255,255,255,0.8)">
     <h2>Welcome to Showcase!</h2>
     <hr />
     <p><code>Showcase</code> is a page...</p>
