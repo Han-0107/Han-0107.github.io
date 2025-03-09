@@ -21,10 +21,5 @@ date: 2024-01-12 00:01:00 +0800
     </p>
     <p>
         For a tidy layout, it is recommended to set the width of the cards to be either multiple of 3 or multiple of 4 for all cards, except for small badges that do not take up much space (width=1).
-    </p>
-      {% raw %}
-      <code>&lt;img data-src=&quot;[Image URL]&quot; class=&quot;lazy w-100 rounded-sm&quot; src=&quot;{{ '/assets/images/empty_300x200.png' | relative_url }}&quot;&gt;</code>
-      {% endraw %}
-    </p>
   </div>
 </div>
