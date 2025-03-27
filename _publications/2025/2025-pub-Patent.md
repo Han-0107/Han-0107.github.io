@@ -5,7 +5,7 @@ selected:       true
 pub:            "Chinese Patent"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-info">Patent</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Patent</span>'
 pub_date:       "2025"
 
 abstract: >-
