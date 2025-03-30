@@ -21,5 +21,5 @@ authors:
   - Shaobo Zhang
 links:
   Code: https://github.com/Han-0107/mcspy
-  Paper: /assets/images/files/ESWA24.pdf
+  Paper: https://www.sciencedirect.com/science/article/pii/S0957417424013083
 ---
