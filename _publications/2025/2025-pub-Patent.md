@@ -1,7 +1,7 @@
 ---
 title:          "A combined navigation computing system based on RISC-V architecture"
 date:           2025-02-25
-selected:       true
+selected:       false
 pub:            "Chinese Patent"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
