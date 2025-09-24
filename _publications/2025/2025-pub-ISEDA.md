@@ -20,5 +20,5 @@ authors:
   - Fan Yang
   - Tinghuan Chen
 links:
-  Paper: https://www.eda2.com/iseda/index.html
+  Paper: https://ieeexplore.ieee.org/document/11101143
 ---
