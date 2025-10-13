@@ -7,6 +7,6 @@ pages:
   url: /stuffs
 # - name: Calendar
 #   url: /calendar
-# - name: Showcase
-#   url: /showcase
+- name: Showcase
+  url: /showcase
   
