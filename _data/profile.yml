@@ -63,10 +63,10 @@ conference_review:
   date: 2026
 
 journal_review:
-# - name: IEEE Transactions on Networking (TNET)
-#   date: 2024
-# - name: IEEE Transactions on Services Computing (TSC)
-#   date: 2024
+- name: IEEE Transactions on Networking (TNET)
+  date: 2024
+- name: IEEE Transactions on Services Computing (TSC)
+  date: 2024
 - name: Expert Systems With Applications (ESWA)
   date: 2024
 - name: Information Sciences (INS)
@@ -81,7 +81,7 @@ awards:
   date: 2024
 - name: <strong>Silver Medal</strong>, Kaggle Competition
   date: 2023
-- name: <strong>National 1st Prize</strong><small> (First in my university's history)</small>, National Electronic Design Contest
+- name: <strong>National 1st Prize</strong><small> (First in the university's history)</small>, National Electronic Design Contest
   date: 2023
 - name: <strong>National 1st Prize</strong>, National Physics Experiment Contest
   date: 2023
