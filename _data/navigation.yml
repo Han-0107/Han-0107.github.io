@@ -3,8 +3,6 @@ pages:
   url: /
 - name: Publications
   url: /publications
-- name: Stuffs
-  url: /stuffs
 # - name: Calendar
 #   url: /calendar
 - name: Life Showcase
