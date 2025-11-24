@@ -6,7 +6,7 @@ pub:            "Chinese Patent"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Patent</span>'
-pub_date:       "2025"
+# pub_date:       "2025"
 
 # abstract: >-
 #   A combined navigation system for efficient collaboration between BDS and INS built through RISC-V-based architecture.
