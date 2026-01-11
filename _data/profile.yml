@@ -56,9 +56,13 @@ experience:
     <b>Supervisor</b>: <a href="https://www.yuzhe-ma.com/">Prof. Yuzhe Ma</a>
   date: Jun. 2024 - Dec. 2024
 
+teaching:
+- name: ENGG2440A - Discrete Mathematics for Engineers
+  date: 2025-26
+- name: CENG2030 - Fundamentals of Embedded Systems
+  date: 2026-27
+
 conference_review:
-# - name: International Conference on Learning Representations (ICLR)
-#   date: 2025
 - name: AAAI Conference on Artificial Intelligence (AAAI)
   date: 2025
 
