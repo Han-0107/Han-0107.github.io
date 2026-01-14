@@ -57,10 +57,10 @@ experience:
   date: Jun. 2024 - Dec. 2024
 
 teaching:
-- name: ENGG2440A - Discrete Mathematics for Engineers
-  date: 2025-26
 - name: CENG2030 - Fundamentals of Embedded Systems
   date: 2026-27
+- name: ENGG2440A - Discrete Mathematics for Engineers
+  date: 2025-26
 
 conference_review:
 - name: AAAI Conference on Artificial Intelligence (AAAI)
