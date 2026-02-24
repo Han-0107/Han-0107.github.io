@@ -1,7 +1,7 @@
 ---
 title:          "Point-Cap: An Efficient Model for Chip-scale Interconnect Capacitance Extraction"
 date:           2025-05-12
-selected:       true
+selected:       false
 pub:            "International Symposium of EDA (ISEDA)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

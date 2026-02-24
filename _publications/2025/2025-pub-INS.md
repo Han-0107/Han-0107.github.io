@@ -1,7 +1,7 @@
 ---
 title:          "PUWR-TSSG: A CMAB-based post-unknown worker recruitment scheme for Three-Stage Stackelberg Games in Mobile Crowd Sensing"
 date:           2025-09-24
-selected:       true
+selected:       false
 pub:            "Information Sciences (INS)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
