@@ -7,7 +7,7 @@ pub:            "Design Automation Conference (DAC)"
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Conference</span>'
 pub_date:       "2026"
-pub_location: Long Bench, California, USA
+pub_location: Long Beach, California, USA
 
 # abstract: >-
 #   A combined navigation system for efficient collaboration between BDS and INS built through RISC-V-based architecture.
