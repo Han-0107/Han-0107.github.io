@@ -24,4 +24,5 @@ authors:
   - Tinghuan Chen
 links:
   Paper: https://www.date-conference.com/
+  Slides: /PDFs/PCB-Migrator.pdf
 ---
