@@ -23,6 +23,6 @@ authors:
   - Tsung-Yi Ho
   - Tinghuan Chen
 links:
-  Paper: https://www.date-conference.com/
-  Slides: /PDFs/PCB-Migrator.pdf
+  Paper: /PDFs/PCB-Migrator_paper.pdf
+  Slides: /PDFs/PCB-Migrator_slides.pdf
 ---
