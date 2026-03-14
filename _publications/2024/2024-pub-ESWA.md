@@ -20,6 +20,6 @@ authors:
   - Houbing Song
   - Shaobo Zhang
 links:
-  Code: https://github.com/Han-0107/mcspy
   Paper: https://www.sciencedirect.com/science/article/pii/S0957417424013083
+  Code: https://github.com/Han-0107/mcspy
 ---
