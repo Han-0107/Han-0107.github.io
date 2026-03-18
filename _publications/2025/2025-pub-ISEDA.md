@@ -21,4 +21,5 @@ authors:
   - Tinghuan Chen
 links:
   Paper: https://ieeexplore.ieee.org/document/11101143
+  Website: https://www.eda2.com/iseda2025/index.html
 ---
