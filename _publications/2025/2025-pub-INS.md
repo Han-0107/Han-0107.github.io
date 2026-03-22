@@ -5,7 +5,7 @@ selected:       false
 pub:            "Information Sciences (INS)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-info">SCI-Q1 Top Journal</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">SCI-Q1 Journal</span>'
 # pub_date:       "2025"
 
 # abstract: >-
