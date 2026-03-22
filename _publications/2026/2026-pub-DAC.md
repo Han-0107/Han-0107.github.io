@@ -5,7 +5,7 @@ selected:       true
 pub:            "Design Automation Conference (DAC)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Conference</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">CCF-A Conference</span>'
 pub_date:       "2026"
 pub_location: Long Beach, California, USA
 

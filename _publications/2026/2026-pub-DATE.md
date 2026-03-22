@@ -5,7 +5,7 @@ selected:       true
 pub:            "Design, Automation and Test in Europe Conference (DATE)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Conference</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">CCF-B Conference</span>'
 pub_date:       "2026"
 pub_location: Verona, Italy
 
