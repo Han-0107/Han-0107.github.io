@@ -65,6 +65,7 @@ teaching:
 
 conference_review:
 - name: AAAI Conference on Artificial Intelligence (AAAI)
+- name: IEEE International Conference on LLM-Aided Design (LAD)
 
 journal_review:
 - name: IEEE Transactions on Networking (TNET)
