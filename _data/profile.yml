@@ -64,10 +64,10 @@ teaching:
   date: 2025-26
 
 conference_review:
-- name: AAAI Conference on Artificial Intelligence (AAAI)
-  date: 2025
 - name: IEEE International Conference on LLM-Aided Design (LAD)
   date: 2026
+- name: AAAI Conference on Artificial Intelligence (AAAI)
+  date: 2025
 
 journal_review:
 - name: IEEE Transactions on Networking (TNET)
