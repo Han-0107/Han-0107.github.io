@@ -5,6 +5,7 @@ selected:       false
 pub:            "arxiv"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
+pub_date:       "2026"
 pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Preprint</span>'
 
 # abstract: >-
