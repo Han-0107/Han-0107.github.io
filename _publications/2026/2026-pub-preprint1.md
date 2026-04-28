@@ -1,7 +1,7 @@
 ---
 title:          "AstroVLM: Expert Multi-agent Collaborative Reasoning for Astronomical Imaging Quality Diagnosis"
 date:           2026-04-28
-selected:       true
+selected:       false
 pub:            "arxiv"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

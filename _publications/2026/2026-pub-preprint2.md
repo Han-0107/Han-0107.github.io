@@ -1,7 +1,7 @@
 ---
 title:          "OrgAgent: Organize Your Multi-Agent System like a Company"
 date:           2026-04-28
-selected:       true
+selected:       false
 pub:            "arxiv"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
