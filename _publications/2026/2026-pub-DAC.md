@@ -2,10 +2,10 @@
 title:          "ModuPlace: LLM-Assisted Modular PCB Placement via Preference-Optimized Constraint Graph Generation"
 date:           2026-07-26
 selected:       true
-pub:            "Design Automation Conference (DAC)"
+pub:            "Design Automation Conference"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">CCF-A Conference</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">DAC, CCF-A Conference</span>'
 pub_date:       "2026"
 pub_location: Long Beach, California, USA
 

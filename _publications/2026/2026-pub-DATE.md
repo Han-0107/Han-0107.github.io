@@ -2,10 +2,10 @@
 title:          "PCB-Migrator: Automated PCB PnR Migration"
 date:           2026-04-10
 selected:       true
-pub:            "Design, Automation and Test in Europe Conference (DATE)"
+pub:            "Design, Automation and Test in Europe Conference"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">CCF-B Conference</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">DATE, CCF-B Conference</span>'
 pub_date:       "2026"
 pub_location: Verona, Italy
 
