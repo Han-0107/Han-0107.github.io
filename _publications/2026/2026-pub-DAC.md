@@ -24,5 +24,4 @@ authors:
 links:
   Paper: /PDFs/ModuPlace_paper.pdf
   Slides: https://dac.com/
-  Website: https://dac.com/
 ---
