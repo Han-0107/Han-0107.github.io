@@ -44,6 +44,34 @@ places:
     comment: "BSc @Central South Univ."
     emoji: "🇨🇳"
 
+  - name: "Taiyuan"
+    lat: 37.8706
+    lng: 112.5489
+    date: "2020"
+    comment: "Sightseeing!"
+    emoji: "🇨🇳"
+
+  - name: "Datong"
+    lat: 40.0768
+    lng: 113.3000
+    date: "2020"
+    comment: "Sightseeing!"
+    emoji: "🇨🇳"
+
+  - name: "Shanghai"
+    lat: 31.2304
+    lng: 121.4737
+    date: "2024"
+    comment: "Attending Synopsys Developer Conference."
+    emoji: "🇨🇳"
+
+  - name: "Suzhou"
+    lat: 31.2989
+    lng: 120.5853
+    date: "2021"
+    comment: "Sightseeing!"
+    emoji: "🇨🇳"
+
   - name: "Zhuhai"
     lat: 22.2707
     lng: 113.5767
