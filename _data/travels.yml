@@ -9,37 +9,44 @@ places:
     comment: "Pursuing my PhD @CUHK!"
     emoji: "🇭🇰"
 
+  - name: "Changsha"
+    lat: 28.2282
+    lng: 112.9388
+    date: "2021.09 - 2025.06"
+    comment: "BSc @Central South Univ."
+    emoji: "🇨🇳"
+
   - name: "Guangzhou"
     lat: 23.1291
     lng: 113.2644
     date: "2024.06 - 2024.12"
-    comment: "RA @HKUST-GZ."
+    comment: "Research Assistant @HKUST-GZ."
     emoji: "🇨🇳"
 
   - name: "Shenzhen"
     lat: 22.5431
     lng: 114.0579
     date: "2024.02 - Present"
-    comment: "RA @CUHK-SZ"
+    comment: "Research Assistant @CUHK-SZ."
     emoji: "🇨🇳"
 
   - name: "Roma"
     lat: 41.9028
     lng: 12.4964
     date: "2026.04"
-    comment: "Attending DATE-26."
+    comment: "Sightseeing: Colosseo, Vatican, Pantheon, etc."
     emoji: "🇮🇹"
 
   - name: "Verona"
     lat: 45.4384
     lng: 10.9916
     date: "2026.04"
-    comment: "Sightseeing."
+    comment: "Attending DATE-26 and presenting PCB-Migrator."
     emoji: "🇮🇹"
 
   - name: "Venice"
     lat: 45.4406
     lng: 12.3155
     date: "2026.04"
-    comment: "Sightseeing."
+    comment: "Sightseeing: Piazza San Marco, Lido, etc."
     emoji: "🇮🇹"
