@@ -16,6 +16,20 @@ places:
     comment: "Where I was born and raised."
     emoji: "🇨🇳"
 
+  - name: "Chongqing"
+    lat: 29.4316
+    lng: 106.9123
+    date: "2023.12"
+    comment: "Finals of the National Physics Experiment Contest"
+    emoji: "🇨🇳"
+
+  - name: "Jinan"
+    lat: 
+    lng: 
+    date: "2023.10"
+    comment: "Finals of the National Electronic Design Contest"
+    emoji: "🇨🇳"
+
   - name: "Changsha"
     lat: 28.2282
     lng: 112.9388
