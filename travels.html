@@ -99,10 +99,10 @@ navbar_title: Travels
 
     var map = L.map('travel-map', { minZoom: 1 });
 
-    L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-        attribution: '&copy; <a href="https://maps.google.com">Google Maps</a>',
-        subdomains: '0123',
-        maxZoom: 20
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
     }).addTo(map);
 
     var markers = [];
