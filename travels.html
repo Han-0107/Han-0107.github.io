@@ -92,17 +92,14 @@ navbar_title: Travels
 <script>
   var places = JSON.parse(document.getElementById('travel-data').textContent);
 
-  var map = L.map('travel-map', {
-    center: [25, 100],
-    zoom: 3,
-    minZoom: 1
-  });
+  var map = L.map('travel-map', { minZoom: 1 });
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 18
   }).addTo(map);
 
+  var markers = [];
   places.forEach(function(place) {
     var icon = L.divIcon({
       className: 'city-label',
@@ -115,7 +112,7 @@ navbar_title: Travels
       iconSize: [80, 44]
     });
 
-    L.marker([place.lat, place.lng], { icon: icon })
+    var marker = L.marker([place.lat, place.lng], { icon: icon })
       .addTo(map)
       .bindPopup(
         '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
@@ -123,5 +120,12 @@ navbar_title: Travels
         '<div class="popup-comment">' + place.comment + '</div>',
         { maxWidth: 260 }
       );
+    markers.push(marker);
   });
+
+  // Auto-fit view to include all markers with padding
+  if (markers.length > 0) {
+    var group = L.featureGroup(markers);
+    map.fitBounds(group.getBounds(), { padding: [40, 40] });
+  }
 </script>
