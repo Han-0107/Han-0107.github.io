@@ -9,6 +9,13 @@ places:
     comment: "Pursuing my PhD @CUHK!"
     emoji: "🇭🇰"
 
+  - name: "Shenyang"
+    lat: 41.8057
+    lng: 123.4315
+    date: "2003.01 - 2021.09"
+    comment: "Where I was born and raised."
+    emoji: "🇨🇳"
+
   - name: "Changsha"
     lat: 28.2282
     lng: 112.9388
