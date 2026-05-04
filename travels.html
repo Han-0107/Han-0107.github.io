@@ -8,53 +8,60 @@ navbar_title: Travels
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
 <style>
-  #travel-map {
-    height: 600px;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
-  }
-  .city-label {
-    background: none;
-    border: none;
-    box-shadow: none;
-  }
-  .city-label-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-  .city-label-inner .pin-emoji {
-    font-size: 1.6rem;
-    line-height: 1;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
-  }
-  .city-label-inner .pin-name {
-    margin-top: 2px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    background: rgba(255,255,255,0.88);
-    border-radius: 4px;
-    padding: 1px 5px;
-    white-space: nowrap;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
-  }
-  .popup-name {
-    font-weight: 700;
-    font-size: 1.05rem;
-    margin-bottom: 2px;
-  }
-  .popup-date {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 6px;
-  }
-  .popup-comment {
-    font-size: 0.9rem;
-    color: #333;
-    max-width: 220px;
-  }
+    #travel-map {
+        height: 600px;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+    }
+
+    .city-label {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .city-label-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .city-label-inner .pin-emoji {
+        font-size: 1.6rem;
+        line-height: 1;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+    }
+
+    .city-label-inner .pin-name {
+        margin-top: 2px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        background: rgba(255, 255, 255, 0.88);
+        border-radius: 4px;
+        padding: 1px 5px;
+        white-space: nowrap;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+    }
+
+    .popup-name {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 2px;
+    }
+
+    .popup-date {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 6px;
+    }
+
+    .popup-comment {
+        font-size: 0.9rem;
+        color: #333;
+        max-width: 220px;
+    }
 </style>
 
 <!-- Travel data embedded as JSON — safe from formatters -->
@@ -74,58 +81,58 @@ navbar_title: Travels
 </script>
 
 <div class="row mt-4 mb-2">
-  <div class="col">
-    <h2 class="mb-0">🌍 Places I've Been</h2>
-    <p class="text-muted mt-1" style="font-size:0.95rem">
-      {{ site.data.travels.places | size }} places visited &amp; counting…
-    </p>
-  </div>
+    <div class="col">
+        <h2 class="mb-0">🌍 Places I've Been</h2>
+        <p class="text-muted mt-1" style="font-size:0.95rem">
+            {{ site.data.travels.places | size }} places visited &amp; counting…
+        </p>
+    </div>
 </div>
 
 <div class="row mb-5">
-  <div class="col-12">
-    <div id="travel-map"></div>
-  </div>
+    <div class="col-12">
+        <div id="travel-map"></div>
+    </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
-  var places = JSON.parse(document.getElementById('travel-data').textContent);
+    var places = JSON.parse(document.getElementById('travel-data').textContent);
 
-  var map = L.map('travel-map', { minZoom: 1 });
+    var map = L.map('travel-map', { minZoom: 1 });
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18
-  }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(map);
 
-  var markers = [];
-  places.forEach(function(place) {
-    var icon = L.divIcon({
-      className: 'city-label',
-      html: '<div class="city-label-inner">' +
-              '<span class="pin-emoji">' + place.emoji + '</span>' +
-              '<span class="pin-name">' + place.name + '</span>' +
-            '</div>',
-      iconAnchor: [40, 28],
-      popupAnchor: [0, -32],
-      iconSize: [80, 44]
+    var markers = [];
+    places.forEach(function (place) {
+        var icon = L.divIcon({
+            className: 'city-label',
+            html: '<div class="city-label-inner">' +
+                '<span class="pin-emoji">' + place.emoji + '</span>' +
+                '<span class="pin-name">' + place.name + '</span>' +
+                '</div>',
+            iconAnchor: [40, 28],
+            popupAnchor: [0, -32],
+            iconSize: [80, 44]
+        });
+
+        var marker = L.marker([place.lat, place.lng], { icon: icon })
+            .addTo(map)
+            .bindPopup(
+                '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
+                '<div class="popup-date">&#128197; ' + place.date + '</div>' +
+                '<div class="popup-comment">' + place.comment + '</div>',
+                { maxWidth: 260 }
+            );
+        markers.push(marker);
     });
 
-    var marker = L.marker([place.lat, place.lng], { icon: icon })
-      .addTo(map)
-      .bindPopup(
-        '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
-        '<div class="popup-date">&#128197; ' + place.date + '</div>' +
-        '<div class="popup-comment">' + place.comment + '</div>',
-        { maxWidth: 260 }
-      );
-    markers.push(marker);
-  });
-
-  // Auto-fit view to include all markers with padding
-  if (markers.length > 0) {
-    var group = L.featureGroup(markers);
-    map.fitBounds(group.getBounds(), { padding: [40, 40] });
-  }
+    // Auto-fit view to include all markers with padding
+    if (markers.length > 0) {
+        var group = L.featureGroup(markers);
+        map.fitBounds(group.getBounds(), { padding: [40, 40] });
+    }
 </script>

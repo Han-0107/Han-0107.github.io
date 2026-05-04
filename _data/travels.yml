@@ -5,48 +5,41 @@ places:
   - name: "Hong Kong"
     lat: 22.3193
     lng: 114.1694
-    date: "2022 - Present"
-    comment: "My current home 🏠 — studying at CUHK. Love the dim sum and the harbour views."
-    emoji: "🏠"
+    date: "2025.08 - Present"
+    comment: "Pursuing my PhD @CUHK!"
+    emoji: "🇭🇰"
 
-  - name: "Beijing, China"
-    lat: 39.9042
-    lng: 116.4074
-    date: "Growing up"
-    comment: "My hometown. Grew up here — nothing beats a bowl of zhajiangmian on a winter morning."
-    emoji: "🏡"
+  - name: "Guangzhou"
+    lat: 23.1291
+    lng: 113.2644
+    date: "2024.06 - 2024.12"
+    comment: "RA @HKUST-GZ."
+    emoji: "🇨🇳"
 
-  - name: "Shanghai, China"
-    lat: 31.2304
-    lng: 121.4737
-    date: "2021"
-    comment: "Visited for a conference. The Bund at night is absolutely stunning."
-    emoji: "🌃"
-
-  - name: "Shenzhen, China"
+  - name: "Shenzhen"
     lat: 22.5431
     lng: 114.0579
-    date: "2023"
-    comment: "Tech hub right next to HK. Visited Huaqiangbei — a paradise for electronics nerds."
-    emoji: "🤖"
+    date: "2024.02 - Present"
+    comment: "RA @CUHK-SZ"
+    emoji: "🇨🇳"
 
-  - name: "Tokyo, Japan"
-    lat: 35.6762
-    lng: 139.6503
-    date: "2024"
-    comment: "Cherry blossoms in Ueno Park were breathtaking. Best ramen of my life in Shinjuku."
-    emoji: "🌸"
+  - name: "Roma"
+    lat: 41.9028
+    lng: 12.4964
+    date: "2026.04"
+    comment: "Attending DATE-26."
+    emoji: "🇮🇹"
 
-  - name: "Kyoto, Japan"
-    lat: 35.0116
-    lng: 135.7681
-    date: "2024"
-    comment: "Fushimi Inari shrine at sunrise — walked all 10,000 torii gates. Worth every step."
-    emoji: "⛩️"
+  - name: "Verona"
+    lat: 45.4384
+    lng: 10.9916
+    date: "2026.04"
+    comment: "Sightseeing."
+    emoji: "🇮🇹"
 
-  - name: "Singapore"
-    lat: 1.3521
-    lng: 103.8198
-    date: "2023"
-    comment: "Gardens by the Bay and the food at Maxwell Hawker Centre. Clean, efficient, delicious."
-    emoji: "🦁"
+  - name: "Venice"
+    lat: 45.4406
+    lng: 12.3155
+    date: "2026.04"
+    comment: "Sightseeing."
+    emoji: "🇮🇹"
