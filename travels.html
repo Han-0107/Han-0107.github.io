@@ -119,7 +119,10 @@ navbar_title: Travels
     }).addTo(map);
 
     var markers = [];
-    places.forEach(function (place) {
+    places.forEach(function (place, i) {
+        // Earlier in YAML = higher z-index priority
+        var zOffset = (places.length - i) * 100;
+
         var icon = L.divIcon({
             className: 'city-label',
             html: '<div class="city-label-inner">' +
@@ -131,7 +134,7 @@ navbar_title: Travels
             iconSize: [80, 44]
         });
 
-        var marker = L.marker([place.lat, place.lng], { icon: icon })
+        var marker = L.marker([place.lat, place.lng], { icon: icon, zIndexOffset: zOffset })
             .addTo(map)
             .bindPopup(
                 '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
