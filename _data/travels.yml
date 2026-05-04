@@ -24,8 +24,8 @@ places:
     emoji: "🇨🇳"
 
   - name: "Jinan"
-    lat: 
-    lng: 
+    lat: 36.6512
+    lng: 117.1201
     date: "2023.10"
     comment: "Finals of the National Electronic Design Contest"
     emoji: "🇨🇳"
