@@ -144,7 +144,7 @@ navbar_title: Travels
     // Auto-fit view to include all markers with padding
     if (markers.length > 0) {
         var group = L.featureGroup(markers);
-        map.fitBounds(group.getBounds(), { padding: [40, 40] });
+        map.fitBounds(group.getBounds(), { padding: [20, 20] });
     }
 
     // Show/hide city labels based on zoom level (show at zoom >= 5)
