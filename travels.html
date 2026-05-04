@@ -148,16 +148,15 @@ navbar_title: Travels
 
     // Place data from Jekyll
     var places = [
-        {% for place in site.data.travels.places %}
-    {
-        name: { { place.name | jsonify } },
-        lat: { { place.lat } },
-        lng: { { place.lng } },
-        date: { { place.date | jsonify } },
-        comment: { { place.comment | jsonify } },
-        emoji: { { place.emoji | default: "📍" | jsonify } }
-    } {% unless forloop.last %}, {% endunless %}
-    {% endfor %}
+        {% for place in site.data.travels.places %}{
+        name: {{ place.name | jsonify }},
+        lat: {{ place.lat }},
+        lng: {{ place.lng }},
+        date: {{ place.date | jsonify }},
+        comment: {{ place.comment | jsonify }},
+        emoji: {{ place.emoji | default: "📍" | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
     ];
 
     // Add markers
