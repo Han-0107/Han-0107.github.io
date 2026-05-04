@@ -31,29 +31,16 @@ navbar_title: Travels
         font-size: 1.1rem;
         line-height: 1;
         filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
-        transition: font-size 0.2s;
+        transition: font-size 0.15s;
     }
 
     .city-label-inner .pin-name {
         display: none;
-        margin-top: 2px;
-        font-size: 0.72rem;
-        font-weight: 700;
-        color: #1a1a1a;
-        background: rgba(255, 255, 255, 0.88);
-        border-radius: 4px;
-        padding: 1px 5px;
-        white-space: nowrap;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
     }
 
-    /* Show city name when map is zoomed in enough */
-    .show-labels .pin-name {
-        display: block;
-    }
-
-    .show-labels .pin-emoji {
-        font-size: 1.6rem;
+    /* Grow pin when zoomed in */
+    .zoom-in .pin-emoji {
+        font-size: 1.5rem;
     }
 
     .popup-name {
@@ -125,13 +112,10 @@ navbar_title: Travels
 
         var icon = L.divIcon({
             className: 'city-label',
-            html: '<div class="city-label-inner">' +
-                '<span class="pin-emoji">' + place.emoji + '</span>' +
-                '<span class="pin-name">' + place.name + '</span>' +
-                '</div>',
-            iconAnchor: [40, 28],
-            popupAnchor: [0, -32],
-            iconSize: [80, 44]
+            html: '<div class="city-label-inner"><span class="pin-emoji">📍</span></div>',
+            iconAnchor: [10, 24],
+            popupAnchor: [0, -26],
+            iconSize: [20, 24]
         });
 
         var marker = L.marker([place.lat, place.lng], { icon: icon, zIndexOffset: zOffset })
@@ -151,16 +135,17 @@ navbar_title: Travels
         map.fitBounds(group.getBounds(), { padding: [5, 5] });
     }
 
-    // Show/hide city labels based on zoom level (show at zoom >= 5)
-    var LABEL_ZOOM = 6;
-    function updateLabels() {
+    // Grow pin size when zoomed in (zoom >= 5)
+    var PIN_ZOOM = 5;
+    function updatePinSize() {
         var container = document.getElementById('travel-map');
-        if (map.getZoom() >= LABEL_ZOOM) {
-            container.classList.add('show-labels');
+        if (map.getZoom() >= PIN_ZOOM) {
+            container.classList.add('zoom-in');
         } else {
-            container.classList.remove('show-labels');
+            container.classList.remove('zoom-in');
         }
     }
-    map.on('zoomend', updateLabels);
-    updateLabels();
+    map.on('zoomend', updatePinSize);
+    updatePinSize();
+</script>
 </script>
