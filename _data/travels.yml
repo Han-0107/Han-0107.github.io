@@ -9,6 +9,13 @@ places:
     comment: "Pursuing my PhD @CUHK!"
     emoji: "🇭🇰"
 
+  - name: "Macau"
+    lat: 22.3193
+    lng: 114.1694
+    date: "2025.08 - Present"
+    comment: "Sightseeing! Casino and New Year's Eve fireworks."
+    emoji: "🇲🇴"
+
   - name: "Shenyang"
     lat: 41.8057
     lng: 123.4315
@@ -20,14 +27,14 @@ places:
     lat: 29.4316
     lng: 106.9123
     date: "2023.12"
-    comment: "Finals of the National Physics Experiment Contest"
+    comment: "Finals of the National Physics Experiment Contest."
     emoji: "🇨🇳"
 
   - name: "Jinan"
     lat: 36.6512
     lng: 117.1201
     date: "2023.10"
-    comment: "Finals of the National Electronic Design Contest"
+    comment: "Finals of the National Electronic Design Contest."
     emoji: "🇨🇳"
 
   - name: "Changsha"
@@ -55,7 +62,7 @@ places:
     lat: 41.9028
     lng: 12.4964
     date: "2026.04"
-    comment: "Sightseeing: Colosseo, Vatican, Pantheon, etc."
+    comment: "Sightseeing! Colosseo, Vatican, Pantheon, etc."
     emoji: "🇮🇹"
 
   - name: "Verona"
@@ -69,5 +76,5 @@ places:
     lat: 45.4406
     lng: 12.3155
     date: "2026.04"
-    comment: "Sightseeing: Piazza San Marco, Lido, etc."
+    comment: "Sightseeing! Piazza San Marco, Lido, etc."
     emoji: "🇮🇹"
