@@ -10,9 +10,9 @@ places:
     emoji: "🇭🇰"
 
   - name: "Macau"
-    lat: 22.3193
-    lng: 114.1694
-    date: "2025.08 - Present"
+    lat: 22.1987
+    lng: 113.5439
+    date: "2024.12.31 - 2025.01.01"
     comment: "Sightseeing! Casino and New Year's Eve fireworks."
     emoji: "🇲🇴"
 
@@ -42,6 +42,13 @@ places:
     lng: 112.9388
     date: "2021.09 - 2025.06"
     comment: "BSc @Central South Univ."
+    emoji: "🇨🇳"
+
+  - name: "Zhuhai"
+    lat: 22.2707
+    lng: 113.5767
+    date: "2024.05"
+    comment: "Sightseeing!."
     emoji: "🇨🇳"
 
   - name: "Guangzhou"
