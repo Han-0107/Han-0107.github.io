@@ -5,194 +5,123 @@ navbar_title: Travels
 ---
 
 <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
 <style>
-    #travel-map {
-        height: 520px;
-        border-radius: 12px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-        z-index: 0;
-    }
-
-    .travel-place-list {
-        max-height: 520px;
-        overflow-y: auto;
-    }
-
-    .travel-place-card {
-        cursor: pointer;
-        transition: box-shadow 0.2s, transform 0.2s;
-        border-left: 4px solid #4a90d9;
-    }
-
-    .travel-place-card:hover,
-    .travel-place-card.active {
-        box-shadow: 0 4px 16px rgba(74, 144, 217, 0.25);
-        transform: translateX(4px);
-        border-left-color: #e36b2e;
-    }
-
-    .travel-place-card .place-emoji {
-        font-size: 1.6rem;
-        line-height: 1;
-    }
-
-    .travel-place-card .place-name {
-        font-weight: 700;
-        font-size: 1.05rem;
-    }
-
-    .travel-place-card .place-date {
-        font-size: 0.82rem;
-        color: #888;
-    }
-
-    .travel-place-card .place-comment {
-        font-size: 0.9rem;
-        color: #444;
-        margin-top: 4px;
-    }
-
-    .leaflet-popup-content {
-        min-width: 200px;
-    }
-
-    .popup-name {
-        font-weight: 700;
-        font-size: 1.05rem;
-        margin-bottom: 2px;
-    }
-
-    .popup-date {
-        font-size: 0.8rem;
-        color: #888;
-        margin-bottom: 6px;
-    }
-
-    .popup-comment {
-        font-size: 0.9rem;
-        color: #333;
-    }
-
-    .map-counter {
-        font-size: 0.95rem;
-        color: #666;
-    }
+  #travel-map {
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  }
+  .city-label {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .city-label-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  .city-label-inner .pin-emoji {
+    font-size: 1.6rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  }
+  .city-label-inner .pin-name {
+    margin-top: 2px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    background: rgba(255,255,255,0.88);
+    border-radius: 4px;
+    padding: 1px 5px;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  }
+  .popup-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+  }
+  .popup-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 6px;
+  }
+  .popup-comment {
+    font-size: 0.9rem;
+    color: #333;
+    max-width: 220px;
+  }
 </style>
 
+<!-- Travel data embedded as JSON — safe from formatters -->
+<script type="application/json" id="travel-data">
+[
+  {% for place in site.data.travels.places %}
+  {
+    "name": {{ place.name | jsonify }},
+    "lat": {{ place.lat }},
+    "lng": {{ place.lng }},
+    "date": {{ place.date | jsonify }},
+    "comment": {{ place.comment | jsonify }},
+    "emoji": {{ place.emoji | default: "📍" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
 <div class="row mt-4 mb-2">
-    <div class="col">
-        <h2 class="mb-0">🌍 Places I've Been</h2>
-        <p class="text-muted mt-1 map-counter">
-            {{ site.data.travels.places | size }} places visited &amp; counting…
-        </p>
-    </div>
+  <div class="col">
+    <h2 class="mb-0">🌍 Places I've Been</h2>
+    <p class="text-muted mt-1" style="font-size:0.95rem">
+      {{ site.data.travels.places | size }} places visited &amp; counting…
+    </p>
+  </div>
 </div>
 
 <div class="row mb-5">
-    <!-- Map -->
-    <div class="col-12 col-lg-8 mb-3 mb-lg-0">
-        <div id="travel-map"></div>
-    </div>
-
-    <!-- Sidebar list -->
-    <div class="col-12 col-lg-4">
-        <div class="travel-place-list pr-1">
-            {% for place in site.data.travels.places %}
-            <div class="travel-place-card card mb-2 p-3" data-lat="{{ place.lat }}" data-lng="{{ place.lng }}"
-                data-index="{{ forloop.index0 }}">
-                <div class="d-flex align-items-start">
-                    <div class="place-emoji mr-3">{{ place.emoji | default: "📍" }}</div>
-                    <div>
-                        <div class="place-name">{{ place.name }}</div>
-                        <div class="place-date"><i class="fas fa-calendar-alt mr-1"></i>{{ place.date }}</div>
-                        <div class="place-comment">{{ place.comment }}</div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+  <div class="col-12">
+    <div id="travel-map"></div>
+  </div>
 </div>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN2GqM=" crossorigin=""></script>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
-    // Initialize map
-    var map = L.map('travel-map', {
-        center: [25, 50],
-        zoom: 2,
-        minZoom: 1,
+  var places = JSON.parse(document.getElementById('travel-data').textContent);
+
+  var map = L.map('travel-map', {
+    center: [25, 100],
+    zoom: 3,
+    minZoom: 1
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(map);
+
+  places.forEach(function(place) {
+    var icon = L.divIcon({
+      className: 'city-label',
+      html: '<div class="city-label-inner">' +
+              '<span class="pin-emoji">' + place.emoji + '</span>' +
+              '<span class="pin-name">' + place.name + '</span>' +
+            '</div>',
+      iconAnchor: [40, 28],
+      popupAnchor: [0, -32],
+      iconSize: [80, 44]
     });
 
-    // Tile layer (OpenStreetMap, no API key needed)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 18
-    }).addTo(map);
-
-    // Custom marker icon
-    function makeIcon(emoji) {
-        return L.divIcon({
-            className: '',
-            html: '<div style="font-size:1.8rem;line-height:1;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3));cursor:pointer">' + emoji + '</div>',
-            iconSize: [32, 32],
-            iconAnchor: [16, 28],
-            popupAnchor: [0, -28]
-        });
-    }
-
-    // Place data from Jekyll
-    var places = [
-        {% for place in site.data.travels.places %}{
-        name: {{ place.name | jsonify }},
-        lat: {{ place.lat }},
-        lng: {{ place.lng }},
-        date: {{ place.date | jsonify }},
-        comment: {{ place.comment | jsonify }},
-        emoji: {{ place.emoji | default: "📍" | jsonify }}
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    ];
-
-    // Add markers
-    var markers = [];
-    places.forEach(function (place, i) {
-        var marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.emoji) })
-            .addTo(map)
-            .bindPopup(
-                '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
-                '<div class="popup-date"><i class="fas fa-calendar-alt" style="margin-right:4px"></i>' + place.date + '</div>' +
-                '<div class="popup-comment">' + place.comment + '</div>'
-            );
-        markers.push(marker);
-    });
-
-    // Sidebar card interaction
-    var cards = document.querySelectorAll('.travel-place-card');
-    cards.forEach(function (card, i) {
-        card.addEventListener('click', function () {
-            // Remove active from all
-            cards.forEach(function (c) { c.classList.remove('active'); });
-            card.classList.add('active');
-
-            var lat = parseFloat(card.dataset.lat);
-            var lng = parseFloat(card.dataset.lng);
-            map.setView([lat, lng], 5, { animate: true });
-            markers[i].openPopup();
-        });
-    });
-
-    // Clicking map marker highlights sidebar card
-    markers.forEach(function (marker, i) {
-        marker.on('click', function () {
-            cards.forEach(function (c) { c.classList.remove('active'); });
-            cards[i].classList.add('active');
-            cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
-    });
+    L.marker([place.lat, place.lng], { icon: icon })
+      .addTo(map)
+      .bindPopup(
+        '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
+        '<div class="popup-date">&#128197; ' + place.date + '</div>' +
+        '<div class="popup-comment">' + place.comment + '</div>',
+        { maxWidth: 260 }
+      );
+  });
 </script>
