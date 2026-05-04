@@ -13,7 +13,7 @@ places:
     lat: 22.1987
     lng: 113.5439
     date: "2024.12.31 - 2025.01.01"
-    comment: "Sightseeing! Casino and New Year's Eve fireworks."
+    comment: "Sightseeing, Casino and New Year's Eve fireworks!"
     emoji: "🇲🇴"
 
   - name: "Shenyang"
@@ -48,7 +48,7 @@ places:
     lat: 22.2707
     lng: 113.5767
     date: "2024.05"
-    comment: "Sightseeing!."
+    comment: "Sightseeing!"
     emoji: "🇨🇳"
 
   - name: "Guangzhou"
@@ -69,7 +69,7 @@ places:
     lat: 41.9028
     lng: 12.4964
     date: "2026.04"
-    comment: "Sightseeing! Colosseo, Vatican, Pantheon, etc."
+    comment: "Sightseeing, Colosseo, Vatican, Pantheon, etc!"
     emoji: "🇮🇹"
 
   - name: "Verona"
@@ -83,5 +83,5 @@ places:
     lat: 45.4406
     lng: 12.3155
     date: "2026.04"
-    comment: "Sightseeing! Piazza San Marco, Lido, etc."
+    comment: "Sightseeing, Piazza San Marco, Lido, etc!"
     emoji: "🇮🇹"
