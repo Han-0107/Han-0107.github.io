@@ -70,6 +70,8 @@ conference_review:
   date: 2025
 
 journal_review:
+- name: IEEE Transactions on Automation Science and Engineering (TASE)
+  date: 2026
 - name: IEEE Transactions on Networking (TNET)
   date: 2024
 - name: IEEE Transactions on Services Computing (TSC)
