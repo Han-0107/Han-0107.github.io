@@ -23,6 +23,6 @@ authors:
   - Bei Yu
   - Tsung-Yi Ho
 links:
-  Paper: https://icml.cc/Conferences/2026
+  Paper: /PDFs/GenLeaf_paper.pdf
   Slides: https://icml.cc/Conferences/2026
 ---
