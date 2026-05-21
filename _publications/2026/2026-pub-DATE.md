@@ -25,4 +25,5 @@ authors:
 links:
   Paper: /PDFs/PCB-Migrator_paper.pdf
   Slides: /PDFs/PCB-Migrator_slides.pdf
+  Poster: /PDFs/PCB-Migrator_poster.pdf
 ---
