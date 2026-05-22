@@ -27,14 +27,14 @@ places:
     lat: 29.4316
     lng: 106.9123
     date: "2023.12"
-    comment: "Finals of the National Physics Experiment Contest."
+    comment: "Finals of the National Physics Experiment Competition."
     emoji: "🇨🇳"
 
   - name: "Jinan"
     lat: 36.6512
     lng: 117.1201
     date: "2023.10"
-    comment: "Finals of the National Electronic Design Contest."
+    comment: "Finals of the National Electronic Design Competition."
     emoji: "🇨🇳"
 
   - name: "Changsha"
