@@ -37,6 +37,13 @@ places:
     comment: "Finals of the National Electronic Design Competition."
     emoji: "🇨🇳"
 
+  - name: "Qingdao"
+    lat: 36.0671
+    lng: 120.3826
+    date: "2025.06"
+    comment: "Visit the Computer Science and Engineering College of Shandong University"
+    emoji: "🇨🇳"
+
   - name: "Changsha"
     lat: 28.2282
     lng: 112.9388
