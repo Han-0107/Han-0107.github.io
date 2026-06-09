@@ -25,4 +25,5 @@ authors:
 links:
   Paper: /PDFs/GenLeaf_paper.pdf
   Slides: https://icml.cc/Conferences/2026
+  Poster: /PDFs/GenLeaf_poster.pdf
 ---
