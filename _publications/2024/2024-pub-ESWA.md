@@ -2,7 +2,7 @@
 title:          "Selecting workers like expert for crowdsourcing by integration evaluation of individual and collaborative abilities"
 date:           2024-06-12
 selected:       true
-pub:            "Expert Systems With Applications (ESWA)"
+pub:            "Expert Systems With Applications <strong>(ESWA)</strong>"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-info">SCI-Q1 Journal</span>'
