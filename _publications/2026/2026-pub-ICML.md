@@ -2,7 +2,7 @@
 title:          "Expert-level Leaf Cell Layout Generation via Preference-Optimized LLM"
 date:           2026-07-06
 selected:       true
-pub:            "International Conference on Machine Learning <strong>(ICML)</strong>"
+pub:            "International Conference on Machine Learning (<strong>ICML</strong>)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">CCF-A Conference</span>'
