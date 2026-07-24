@@ -1,0 +1,151 @@
+---
+layout: default
+title: Footprints
+navbar_title: Footprints
+---
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+<style>
+    #travel-map {
+        height: 600px;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+    }
+
+    .city-label {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .city-label-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .city-label-inner .pin-emoji {
+        font-size: 1.1rem;
+        line-height: 1;
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+        transition: font-size 0.15s;
+    }
+
+    .city-label-inner .pin-name {
+        display: none;
+    }
+
+    /* Grow pin when zoomed in */
+    .zoom-in .pin-emoji {
+        font-size: 1.5rem;
+    }
+
+    .popup-name {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 2px;
+    }
+
+    .popup-date {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 6px;
+    }
+
+    .popup-comment {
+        font-size: 0.9rem;
+        color: #333;
+        max-width: 220px;
+    }
+</style>
+
+<!-- Travel data embedded as JSON — safe from formatters -->
+<script type="application/json" id="travel-data">
+[
+  {% for place in site.data.travels.places %}
+  {
+    "name": {{ place.name | jsonify }},
+    "lat": {{ place.lat }},
+    "lng": {{ place.lng }},
+    "date": {{ place.date | jsonify }},
+    "comment": {{ place.comment | jsonify }},
+    "emoji": {{ place.emoji | default: "📍" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<div class="row mt-4 mb-2">
+    <div class="col">
+        <h2 class="mb-0">🌍 Footprints</h2>
+        <p class="text-muted mt-1" style="font-size:0.95rem">
+            {{ site.data.travels.places | size }} places visited &amp; counting…
+        </p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <div id="travel-map"></div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+    var places = JSON.parse(document.getElementById('travel-data').textContent);
+
+    var map = L.map('travel-map', { minZoom: 1 });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
+    var markers = [];
+    places.forEach(function (place, i) {
+        // Earlier in YAML = higher z-index priority
+        var zOffset = (places.length - i) * 100;
+
+        var icon = L.divIcon({
+            className: 'city-label',
+            html: '<div class="city-label-inner"><span class="pin-emoji">📍</span></div>',
+            iconAnchor: [10, 24],
+            popupAnchor: [0, -26],
+            iconSize: [20, 24]
+        });
+
+        var marker = L.marker([place.lat, place.lng], { icon: icon, zIndexOffset: zOffset })
+            .addTo(map)
+            .bindPopup(
+                '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
+                '<div class="popup-date">' + place.date + '</div>' +
+                '<div class="popup-comment">' + place.comment + '</div>',
+                { maxWidth: 260 }
+            );
+        markers.push(marker);
+    });
+
+    // Auto-fit view to include all markers with padding
+    if (markers.length > 0) {
+        var group = L.featureGroup(markers);
+        map.fitBounds(group.getBounds(), { padding: [5, 5] });
+    }
+
+    // Grow pin size when zoomed in (zoom >= 5)
+    var PIN_ZOOM = 5;
+    function updatePinSize() {
+        var container = document.getElementById('travel-map');
+        if (map.getZoom() >= PIN_ZOOM) {
+            container.classList.add('zoom-in');
+        } else {
+            container.classList.remove('zoom-in');
+        }
+    }
+    map.on('zoomend', updatePinSize);
+    updatePinSize();
+</script>
+</script>

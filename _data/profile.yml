@@ -1,0 +1,106 @@
+primary_name: "Yaohui Han"
+secondary_name: ""
+navbar_name: "Yaohui Han"
+
+positions:
+- logo: /assets/images/badges/CUHK.svg
+  name: <strong>Ph.D. Student @CSE, CUHK</strong>
+
+email: "yhhan25@cse.cuhk.edu.hk"
+# cv_link: /assets/images/files/CV_Yaohui.pdf
+gscholar: WPNvcXMAAAAJ
+github: Han-0107
+# twitter: your_twitter_id
+wechat_qrcode: /assets/images/etc/wechat_qr.jpg
+wechat_prompt: >-
+  <p>请在添加微信好友时，备注上您的<strong>姓名</strong>和<strong>所在单位</strong>，谢谢！</p>
+  <p>Please tell me your <strong>name</strong> and <strong>affiliation</strong> when adding my WeChat. Thanks!</p>
+# linkedin: yaohui-han-379079325
+# orcid: 0009-0007-2201-7283
+address: Ho Sin-Hang Engineering Building, Sha Tin, Hong Kong
+short_bio: | 
+  <p>Hi! I am Sonny Yaohui Han (韩耀辉), a Ph.D. student at <a href="https://www.cse.cuhk.edu.hk/">Department of Computer Science and Engineering</a>, <a href="https://www.cuhk.edu.hk/chinese/index.html">The Chinese University of Hong Kong</a>, supervised by <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a>. I am also very fortunate to work with <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a> and <a href="https://mypage.cuhk.edu.cn/academics/chentinghuan/">Prof. Tinghuan Chen</a>. Before this, I obtained my bachelor's degree at <a href="https://www.csu.edu.cn/">Central South University</a> and my high school diploma at <a href="https://zh.wikipedia.org/wiki/%E4%B8%9C%E5%8C%97%E8%82%B2%E6%89%8D%E5%AD%A6%E6%A0%A1">Northeast Yucai School</a> in Shenyang.</p>
+  <p>Currently, my research interest is <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</a> and <a href="https://en.wikipedia.org/wiki/Electronic_design_automation">EDA</a>. I am always looking for potential collaboration opportunities. If you have any idea on research in related fields, please feel free to contact me!</p>
+  <p>During my leisure time, I am also an enthusiast of basketball🏀, badminton🏸, exercising🏋, piano🎹, astronomy🔭, etc. and always willing to try new things.</p>
+portrait_url: /assets/images/me.jpg
+# motto: "&#x1F4AB; Meeting you in this world is like encountering flowers in the rain."
+# portrait_caption: >-
+#   My beloved electric moped and me
+
+education:
+- name: The Chinese University of Hong Kong
+  logo: /assets/images/badges/CUHK.svg
+  position: >- 
+    Ph.D. in Computer Science and Engineering</br>
+    <b>Supervisor</b>: <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a> & <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a>
+  date: Aug. 2025 - Jun. 2029
+
+- name: Central South University
+  logo: /assets/images/badges/CSU.svg
+  position: >-
+    B.Sc. in Physics (Major)</br>
+    B.Eng. in Electronic Engineering (Minor)
+  date: Sep. 2021 - Jun. 2025
+
+experience:
+- name: The Chinese University of Hong Kong, Shenzhen
+  logo: /assets/images/badges/CUHK.svg
+  position: >- 
+    Research Assistant</br>
+    <b>Supervisor</b>: <a href="https://mypage.cuhk.edu.cn/academics/chentinghuan/">Prof. Tinghuan Chen</a>
+  date: Feb. 2024 - Dec. 2025
+
+- name: The Hong Kong University of Science and Technology, Guangzhou
+  logo: /assets/images/badges/HKUST.svg
+  position: >- 
+    Research Assistant</br>
+    <b>Supervisor</b>: <a href="https://www.yuzhe-ma.com/">Prof. Yuzhe Ma</a>
+  date: Jun. 2024 - Dec. 2024
+
+teaching:
+- name: CENG2030 - Fundamentals of Embedded Systems
+  date: 2026-27
+- name: ENGG2440A - Discrete Mathematics for Engineers
+  date: 2025-26
+
+conference_review:
+- name: International Conference on Field-Programmable Logic and Applications (FPL) 
+  date: 2026
+- name: International Conference on LLM-Aided Design (LAD)
+  date: 2026
+- name: AAAI Conference on Artificial Intelligence (AAAI)
+  date: 2025-26
+
+journal_review:
+- name: IEEE Transactions on Automation Science and Engineering (TASE)
+  date: 2026
+- name: IEEE Transactions on Networking (TNET)
+  date: 2024
+- name: IEEE Transactions on Services Computing (TSC)
+  date: 2024
+- name: Information Sciences (INS)
+  date: 2024
+
+awards:
+- name: <strong>DAC Young Fellow</strong>, IEEE Council on Electronic Design Automation
+  date: 2026
+- name: <strong>Full Postgraduate Scholarship</strong>, The Chinese University of Hong Kong
+  date: 2025
+- name: <strong>Outstanding Graduate</strong>, Central South University
+  date: 2025
+- name: <strong>National Scholarship</strong><small> (Top 0.2%)</small>, Education Ministry of PRC
+  date: 2024
+- name: <strong>Kaggle Expert</strong>, Kaggle
+  date: 2024
+- name: <strong>Bronze Medal</strong>, NeurIPS 2024 Competition
+  date: 2024
+- name: <strong>Silver Medal</strong>, Google Competition
+  date: 2023
+- name: <strong>National 1st Prize</strong><small> (First ever in CSU)</small>, National Electronic Design Competition
+  date: 2023
+- name: <strong>National 1st Prize</strong>, National Physics Experiment Competition
+  date: 2023
+- name: <strong>Provincial 1st Prize</strong>, National Mathematical Competition in Modeling
+  date: 2023
+- name: <strong>Innovation Scholarship</strong>, GEM Co., Ltd.
+  date: 2023
