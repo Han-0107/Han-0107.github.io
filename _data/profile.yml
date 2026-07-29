@@ -77,6 +77,7 @@ conference_review:
 
 journal_review:
 - name: IEEE Transactions on Computer-Aided Design of Integrated Circuits & Systems (TCAD)
+- date: 2026
 - name: IEEE Transactions on Automation Science and Engineering (TASE)
   date: 2026
 - name: IEEE Transactions on Networking (TNET)
