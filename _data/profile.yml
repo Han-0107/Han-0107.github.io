@@ -64,21 +64,22 @@ teaching:
   date: 2025-26
 
 conference_review:
-- name: International Conference on Field-Programmable Logic and Applications (FPL) 
+- name: International Conference on Learning Representations (ICLR)
   date: 2026
-- name: International Conference on LLM-Aided Design (LAD)
+- name: International Conference on Computer Design (ICCD)
   date: 2026
 - name: AAAI Conference on Artificial Intelligence (AAAI)
   date: 2025-26
+- name: Asia and South-Pacific regions on Electronic Design Automation (ASP-DAC)
+  date: 2025-26
 
 journal_review:
+- name: IEEE Transactions on Computer-Aided Design of Integrated Circuits & Systems (TCAD)
 - name: IEEE Transactions on Automation Science and Engineering (TASE)
   date: 2026
 - name: IEEE Transactions on Networking (TNET)
   date: 2024
 - name: IEEE Transactions on Services Computing (TSC)
-  date: 2024
-- name: Information Sciences (INS)
   date: 2024
 
 awards:
