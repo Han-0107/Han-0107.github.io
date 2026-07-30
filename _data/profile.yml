@@ -4,7 +4,7 @@ navbar_name: "Yaohui Han"
 
 positions:
 - logo: /assets/images/badges/CUHK.svg
-  name: <strong>Rpg @CSE, CUHK</strong>
+  name: <strong>Ph.D. Student @CSE, CUHK</strong>
 
 email: "yhhan25@cse.cuhk.edu.hk"
 # cv_link: /assets/images/files/CV_Yaohui.pdf
@@ -19,7 +19,7 @@ wechat_prompt: >-
 # orcid: 0009-0007-2201-7283
 address: Ho Sin-Hang Engineering Building, Sha Tin, Hong Kong
 short_bio: | 
-  <p>Hi! I am Sonny Yaohui Han (韩耀辉), a postgraduate student at <a href="https://www.cse.cuhk.edu.hk/">Department of Computer Science and Engineering</a>, <a href="https://www.cuhk.edu.hk/chinese/index.html">The Chinese University of Hong Kong</a>, supervised by <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a>. I am also very fortunate to work with <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a> and <a href="https://mypage.cuhk.edu.cn/academics/chentinghuan/">Prof. Tinghuan Chen</a>. Before this, I obtained my bachelor's degree at <a href="https://www.csu.edu.cn/">Central South University</a> and my high school diploma at <a href="https://zh.wikipedia.org/wiki/%E4%B8%9C%E5%8C%97%E8%82%B2%E6%89%8D%E5%AD%A6%E6%A0%A1">Northeast Yucai School</a> in Shenyang.</p>
+  <p>Hi! I am Sonny Yaohui Han (韩耀辉), a Ph.D. student at <a href="https://www.cse.cuhk.edu.hk/">Department of Computer Science and Engineering</a>, <a href="https://www.cuhk.edu.hk/chinese/index.html">The Chinese University of Hong Kong</a>, supervised by <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a>. I am also very fortunate to work with <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a> and <a href="https://mypage.cuhk.edu.cn/academics/chentinghuan/">Prof. Tinghuan Chen</a>. Before this, I obtained my bachelor's degree at <a href="https://www.csu.edu.cn/">Central South University</a> and my high school diploma at <a href="https://zh.wikipedia.org/wiki/%E4%B8%9C%E5%8C%97%E8%82%B2%E6%89%8D%E5%AD%A6%E6%A0%A1">Northeast Yucai School</a> in Shenyang.</p>
   <p>Currently, my research interest is <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</a> and <a href="https://en.wikipedia.org/wiki/Electronic_design_automation">EDA</a>. I am always looking for potential collaboration opportunities. If you have any idea on research in related fields, please feel free to contact me!</p>
   <p>During my leisure time, I am also an enthusiast of basketball🏀, badminton🏸, exercising🏋, piano🎹, astronomy🔭, etc. and always willing to try new things.</p>
 portrait_url: /assets/images/me_n.jpg
@@ -31,7 +31,7 @@ education:
 - name: The Chinese University of Hong Kong
   logo: /assets/images/badges/CUHK.svg
   position: >- 
-    Rpg in Computer Science and Engineering</br>
+    Ph.D. in Computer Science and Engineering</br>
     <b>Supervisor</b>: <a href="https://tsungyiho.github.io/">Prof. Tsung-Yi Ho</a> & <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a>
   date: Aug. 2025 - Present
 
