@@ -43,6 +43,12 @@ education:
   date: Sep. 2021 - Jun. 2025
 
 experience:
+- name: Stealth Startup
+  logo: /assets/images/badges/CUHK.svg
+  position: >- 
+    Technical Advisor</br>
+    This project raised <b>US$14,810,000</b> in investment.
+  date: Feb. 2024 - Dec. 2025
 - name: The Chinese University of Hong Kong, Shenzhen
   logo: /assets/images/badges/CUHK.svg
   position: >- 
