@@ -43,11 +43,11 @@ education:
   date: Sep. 2021 - Jun. 2025
 
 experience:
-- name: Stealth Startup
-  logo: /assets/images/badges/CUHK.svg
-  position: >- 
-    Technical Advisor</br>
-    Cooperative projects raised <b>US$14.81 million</b> in investment.
+# - name: Stealth Startup
+#   logo: /assets/images/badges/CUHK.svg
+#   position: >- 
+#     Technical Advisor</br>
+#     Cooperative projects raised <b>US$14.81 million</b> in investment.
 - name: The Chinese University of Hong Kong, Shenzhen
   logo: /assets/images/badges/CUHK.svg
   position: >- 
@@ -73,10 +73,10 @@ talks:
 conference_review:
 - name: International Conference on Learning Representations (ICLR)
   date: 2026
-- name: International Conference on Computer Design (ICCD)
-  date: 2026
 - name: AAAI Conference on Artificial Intelligence (AAAI)
   date: 2025-26
+- name: International Conference on Computer Design (ICCD)
+  date: 2026
 - name: Asia and South-Pacific regions on Electronic Design Automation (ASP-DAC)
   date: 2025-26
 
