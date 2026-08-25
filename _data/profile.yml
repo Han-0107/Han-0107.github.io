@@ -63,9 +63,9 @@ experience:
   date: Jun. 2024 - Dec. 2024
 
 talks:
-- name: Young Scholars Forum, Central South University
+- name: Young Scholars Forum, Central South University<small> <a href="/PDFs/CSUCS.pdf">[Link]</a></small>
   date: 2026
-- name: Intelligent Physical Design in EDA, Ventures
+- name: Intelligent Physical Design in EDA, Ventures<small> <a href="https://www.techbeat.net/talk-info?id=1067">[Link]</a></small>
   date: 2026
 - name: Academic Lecture, Shandong University
   date: 2026
@@ -107,7 +107,7 @@ awards:
   date: 2023
 - name: <strong>National 1st Prize</strong><small> (First ever in CSU)</small>, National Electronic Design Competition<small> <a href="/assets/images/cert/EE.png">[Certificate]</a></small>
   date: 2023
-- name: <strong>National 1st Prize</strong>, National Physics Experiment Competition<small> <a href="/assets/images/cert/PHY.png">[Certificate]</a></small>
+- name: <strong>National 1st Prize</strong>, National Physics Experiment Competition
   date: 2023
 - name: <strong>Provincial 1st Prize</strong>, National Mathematical Competition in Modeling
   date: 2023
