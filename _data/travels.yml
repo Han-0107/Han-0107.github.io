@@ -142,6 +142,20 @@ places:
     comment: "Attending DAC-26."
     emoji: "🇺🇸"
 
+  - name: "San Francisco"
+    lat: 37.7749
+    lng: -122.4194
+    date: "2026.07"
+    comment: "First time visit USA."
+    emoji: "🇺🇸"
+
+  - name: "Monterey"
+    lat: 36.6002
+    lng: -121.8947
+    date: "2026.07"
+    comment: "Like the Fisher's House."
+    emoji: "🇺🇸"
+
   - name: "Seoul"
     lat: 37.5665
     lng: 126.9780
