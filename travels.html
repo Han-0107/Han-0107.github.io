@@ -14,33 +14,98 @@ navbar_title: Footprints
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
     }
 
-    .city-label {
+    /* Visit markers: photo card + numbered order badge */
+    .visit-marker {
         background: none;
         border: none;
         box-shadow: none;
     }
 
-    .city-label-inner {
+    .visit-marker-inner {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        width: 28px;
         cursor: pointer;
     }
 
-    .city-label-inner .pin-emoji {
+    .visit-marker-inner .pin-emoji {
         font-size: 1.1rem;
         line-height: 1;
         filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
-        transition: font-size 0.15s;
     }
 
-    .city-label-inner .pin-name {
-        display: none;
+    .visit-photo-card {
+        position: relative;
+        width: 52px;
+        margin: 0 auto;
+        border: 3px solid #fff;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+        cursor: pointer;
+        transition: width 0.15s;
     }
 
-    /* Grow pin when zoomed in */
-    .zoom-in .pin-emoji {
-        font-size: 1.5rem;
+    .visit-photo-card img {
+        display: block;
+        width: 100%;
+        height: 38px;
+        object-fit: cover;
+    }
+
+    .visit-photo-bar {
+        padding: 2px 4px 3px;
+        background: #fff;
+        font-size: 0.55rem;
+        line-height: 1.2;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .visit-badge {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        min-width: 18px;
+        height: 18px;
+        padding: 0 4px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+        color: #111;
+        font-size: 0.65rem;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+        pointer-events: none;
+    }
+
+    /* Grow photo card when zoomed in */
+    .zoom-in .visit-photo-card {
+        width: 66px;
+    }
+
+    .zoom-in .visit-photo-card img {
+        height: 48px;
+    }
+
+    /* Dashed order lines and arrowheads (time order, not routes) */
+    .order-arrow-wrap {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .order-arrow {
+        display: block;
+        font-size: 13px;
+        line-height: 1;
+        color: #2563eb;
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.95);
     }
 
     .popup-name {
@@ -60,6 +125,71 @@ navbar_title: Footprints
         color: #333;
         max-width: 220px;
     }
+
+    .popup-photo {
+        margin-bottom: 6px;
+    }
+
+    .popup-photo img {
+        display: block;
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    /* Synchronized timeline below the map */
+    #travel-timeline {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 8px;
+        padding: 12px 2px 0;
+    }
+
+    .tl-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        color: #555;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.15s;
+    }
+
+    .tl-item:hover {
+        color: #2563eb;
+    }
+
+    .tl-item.active {
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: #111;
+    }
+
+    .tl-num {
+        display: inline-block;
+        min-width: 18px;
+        height: 18px;
+        padding: 0 4px;
+        border-radius: 999px;
+        background: #e8edf7;
+        color: #2563eb;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .tl-item.active .tl-num {
+        background: #2563eb;
+        color: #fff;
+    }
+
+    .tl-arrow {
+        color: #aaa;
+        font-size: 0.85rem;
+    }
 </style>
 
 <!-- Travel data embedded as JSON — safe from formatters -->
@@ -72,6 +202,7 @@ navbar_title: Footprints
     "lng": {{ place.lng }},
     "date": {{ place.date | jsonify }},
     "comment": {{ place.comment | jsonify }},
+    "photo": {{ place.photo | default: "" | jsonify }},
     "emoji": {{ place.emoji | default: "📍" | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -90,12 +221,26 @@ navbar_title: Footprints
 <div class="row mb-5">
     <div class="col-12">
         <div id="travel-map"></div>
+        <div id="travel-timeline" role="list" aria-label="Travel timeline"></div>
+        <p class="text-muted mt-2 mb-0" style="font-size:0.75rem">
+            ⏱️ 按时间排序，箭头只表示先后顺序，不代表实际路线。
+        </p>
     </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
     var places = JSON.parse(document.getElementById('travel-data').textContent);
+
+    // Sort chronologically by the start of each date string (e.g. "2024.02 - Present")
+    function parseStartDate(dateStr) {
+        var m = String(dateStr).match(/^\s*(\d{4})(?:[.\-\/](\d{1,2}))?(?:[.\-\/](\d{1,2}))?/);
+        if (!m) { return 0; }
+        return new Date(Number(m[1]), m[2] ? Number(m[2]) - 1 : 0, m[3] ? Number(m[3]) : 1).getTime();
+    }
+    places.sort(function (a, b) {
+        return parseStartDate(a.date) - parseStartDate(b.date);
+    });
 
     var map = L.map('travel-map', { minZoom: 1 });
 
@@ -105,17 +250,86 @@ navbar_title: Footprints
         maxZoom: 19
     }).addTo(map);
 
+    // --- Dashed order lines with arrowheads (time order, not real routes) ---
+    function orderSegments(a, b) {
+        var dLng = b.lng - a.lng;
+        if (Math.abs(dLng) <= 180) {
+            return [[[a.lat, a.lng], [b.lat, b.lng]]];
+        }
+        // Segment crosses the ±180° antimeridian: split into two pieces
+        var seam = dLng > 180 ? 180 : -180;
+        var seamLat = a.lat + (seam - a.lng) / dLng * (b.lat - a.lat);
+        return dLng > 180
+            ? [[[a.lat, a.lng], [seamLat, 180]], [[seamLat, -180], [b.lat, b.lng]]]
+            : [[[a.lat, a.lng], [seamLat, -180]], [[seamLat, 180], [b.lat, b.lng]]];
+    }
+
+    function segmentMidpoint(a, b) {
+        var dLng = b.lng - a.lng;
+        var midLng;
+        if (dLng > 180) { midLng = a.lng + (dLng - 360) / 2; }
+        else if (dLng < -180) { midLng = a.lng + (dLng + 360) / 2; }
+        else { midLng = a.lng + dLng / 2; }
+        return [(a.lat + b.lat) / 2, midLng];
+    }
+
+    if (places.length > 1) {
+        var lineCoords = [];
+        places.forEach(function (place, i) {
+            if (i > 0) {
+                orderSegments(places[i - 1], place).forEach(function (piece) {
+                    lineCoords.push(piece[0], piece[1]);
+                });
+            }
+        });
+        L.polyline(lineCoords, {
+            color: '#2563eb',
+            weight: 2,
+            opacity: 0.7,
+            dashArray: '6 8',
+            interactive: false
+        }).addTo(map);
+
+        places.forEach(function (place, i) {
+            if (i === 0) { return; }
+            var mid = segmentMidpoint(places[i - 1], place);
+            var dLng = place.lng - places[i - 1].lng;
+            if (dLng > 180) { dLng -= 360; }
+            if (dLng < -180) { dLng += 360; }
+            var dLat = place.lat - places[i - 1].lat;
+            var angle = Math.atan2(dLng, dLat) * 180 / Math.PI; // 0 = north
+            L.marker(mid, {
+                icon: L.divIcon({
+                    className: 'order-arrow-wrap',
+                    html: '<span class="order-arrow" style="transform: rotate(' + (angle - 90) + 'deg)">➤</span>',
+                    iconSize: [16, 16],
+                    iconAnchor: [8, 8]
+                }),
+                interactive: false,
+                keyboard: false
+            }).addTo(map);
+        });
+    }
+
+    // --- Markers with numbered order badges ---
     var markers = [];
     places.forEach(function (place, i) {
-        // Earlier in YAML = higher z-index priority
         var zOffset = (places.length - i) * 100;
 
+        var photo = place.photo || '';
         var icon = L.divIcon({
-            className: 'city-label',
-            html: '<div class="city-label-inner"><span class="pin-emoji">📍</span></div>',
-            iconAnchor: [10, 24],
-            popupAnchor: [0, -26],
-            iconSize: [20, 24]
+            className: 'visit-marker',
+            html: photo
+                ? '<div class="visit-photo-card">' +
+                  '<img src="' + photo + '" alt="' + place.name + '">' +
+                  '<span class="visit-badge">' + (i + 1) + '</span>' +
+                  '<div class="visit-photo-bar">' + place.date + '</div>' +
+                  '</div>'
+                : '<div class="visit-marker-inner"><span class="pin-emoji">📍</span>' +
+                  '<span class="visit-badge">' + (i + 1) + '</span></div>',
+            iconAnchor: photo ? [33, 64] : [14, 28],
+            popupAnchor: [0, -64],
+            iconSize: photo ? [66, 64] : [28, 28]
         });
 
         var marker = L.marker([place.lat, place.lng], { icon: icon, zIndexOffset: zOffset })
@@ -123,16 +337,55 @@ navbar_title: Footprints
             .bindPopup(
                 '<div class="popup-name">' + place.emoji + ' ' + place.name + '</div>' +
                 '<div class="popup-date">' + place.date + '</div>' +
+                (photo ? '<div class="popup-photo"><img src="' + photo + '" alt="' + place.name + '"></div>' : '') +
                 '<div class="popup-comment">' + place.comment + '</div>',
                 { maxWidth: 260 }
             );
+        marker.on('click', function (idx) {
+            return function () { setActiveTimeline(idx); };
+        }(i));
         markers.push(marker);
     });
 
-    // Auto-fit view to include all markers with padding
+    // --- Synchronized timeline below the map ---
+    var timeline = document.getElementById('travel-timeline');
+    var tlItems = [];
+
+    function setActiveTimeline(i) {
+        tlItems.forEach(function (el, j) {
+            el.classList.toggle('active', j === i);
+        });
+    }
+
+    places.forEach(function (place, i) {
+        if (i > 0) {
+            var sep = document.createElement('span');
+            sep.className = 'tl-arrow';
+            sep.textContent = '→';
+            timeline.appendChild(sep);
+        }
+        var item = document.createElement('a');
+        item.className = 'tl-item';
+        item.href = '#travel-map';
+        item.setAttribute('data-index', String(i));
+        item.innerHTML = '<span class="tl-num">' + (i + 1) + '</span><span>' + place.emoji + ' ' + place.name + '</span>';
+        item.addEventListener('click', function (idx) {
+            return function (ev) {
+                ev.preventDefault();
+                var marker = markers[idx];
+                map.flyTo(marker.getLatLng(), Math.max(map.getZoom(), 5), { duration: 0.4 });
+                marker.openPopup();
+                setActiveTimeline(idx);
+            };
+        }(i));
+        timeline.appendChild(item);
+        tlItems.push(item);
+    });
+
+    // Auto-fit view to include all markers with padding (photo cards extend above)
     if (markers.length > 0) {
         var group = L.featureGroup(markers);
-        map.fitBounds(group.getBounds(), { padding: [5, 5] });
+        map.fitBounds(group.getBounds(), { padding: [30, 30] });
     }
 
     // Grow pin size when zoomed in (zoom >= 5)
@@ -147,5 +400,4 @@ navbar_title: Footprints
     }
     map.on('zoomend', updatePinSize);
     updatePinSize();
-</script>
 </script>

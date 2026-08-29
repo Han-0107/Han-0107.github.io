@@ -1,5 +1,5 @@
 # World travel records
-# Each entry: name, lat, lng, date, comment, emoji (optional)
+# Each entry: name, lat, lng, date, comment, photo, emoji (optional)
 
 places:
   - name: "Hong Kong"
@@ -7,6 +7,7 @@ places:
     lng: 114.1694
     date: "2025.08 - Present"
     comment: "Pursuing my PhD @CUHK!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇭🇰"
 
   - name: "Macau"
@@ -14,6 +15,7 @@ places:
     lng: 113.5439
     date: "2024.12.31 - 2025.01.01"
     comment: "Sightseeing, Casino and New Year's Eve fireworks!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇲🇴"
 
   - name: "Shenyang"
@@ -21,6 +23,7 @@ places:
     lng: 123.4315
     date: "2003.01 - 2021.09"
     comment: "Where I was born and raised."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Chongqing"
@@ -28,6 +31,7 @@ places:
     lng: 106.9123
     date: "2023.12"
     comment: "Finals of the National Physics Experiment Competition."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Jinan"
@@ -35,6 +39,7 @@ places:
     lng: 117.1201
     date: "2023.10"
     comment: "Finals of the National Electronic Design Competition."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Qingdao"
@@ -42,6 +47,7 @@ places:
     lng: 120.3826
     date: "2025.06"
     comment: "Visit the Computer Science and Engineering College of Shandong University"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Changsha"
@@ -49,6 +55,7 @@ places:
     lng: 112.9388
     date: "2021.09 - 2025.06"
     comment: "BSc @Central South Univ."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Taiyuan"
@@ -56,6 +63,7 @@ places:
     lng: 112.5489
     date: "2020"
     comment: "Sightseeing!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Datong"
@@ -63,6 +71,7 @@ places:
     lng: 113.3000
     date: "2020"
     comment: "Sightseeing!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Shanghai"
@@ -70,6 +79,7 @@ places:
     lng: 121.4737
     date: "2024"
     comment: "Attending Synopsys Developer Conference."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Suzhou"
@@ -77,6 +87,7 @@ places:
     lng: 120.5853
     date: "2021"
     comment: "Sightseeing!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Zhuhai"
@@ -84,6 +95,7 @@ places:
     lng: 113.5767
     date: "2024.05"
     comment: "Sightseeing!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Guangzhou"
@@ -91,6 +103,7 @@ places:
     lng: 113.2644
     date: "2024.06 - 2024.12"
     comment: "Research Assistant @HKUST-GZ."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Shenzhen"
@@ -98,6 +111,7 @@ places:
     lng: 114.0579
     date: "2024.02 - Present"
     comment: "Research Assistant @CUHK-SZ."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇨🇳"
 
   - name: "Roma"
@@ -105,6 +119,7 @@ places:
     lng: 12.4964
     date: "2026.04"
     comment: "Sightseeing, Colosseo, Vatican, Pantheon, etc!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇮🇹"
 
   - name: "Verona"
@@ -112,6 +127,7 @@ places:
     lng: 10.9916
     date: "2026.04"
     comment: "Attending DATE-26 and presenting PCB-Migrator."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇮🇹"
 
   - name: "Venice"
@@ -119,6 +135,7 @@ places:
     lng: 12.3155
     date: "2026.04"
     comment: "Sightseeing, Piazza San Marco, Lido, etc!"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇮🇹"
 
   - name: "Las Vegas"
@@ -126,6 +143,7 @@ places:
     lng: -115.1398
     date: "2026.07"
     comment: "Casinos, Guns, Shopping"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇺🇸"
 
   - name: "Los Angeles"
@@ -133,6 +151,7 @@ places:
     lng: -118.2437
     date: "2026.07"
     comment: "Griffith Observatory, Shopping"
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇺🇸"
 
   - name: "Long Beach"
@@ -140,6 +159,7 @@ places:
     lng: -118.1937
     date: "2026.07"
     comment: "Attending DAC-26."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇺🇸"
 
   - name: "San Francisco"
@@ -147,6 +167,7 @@ places:
     lng: -122.4194
     date: "2026.07"
     comment: "First time visit USA."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇺🇸"
 
   - name: "Monterey"
@@ -154,6 +175,7 @@ places:
     lng: -121.8947
     date: "2026.07"
     comment: "Like the Fisher's House."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇺🇸"
 
   - name: "Seoul"
@@ -161,4 +183,5 @@ places:
     lng: 126.9780
     date: "2026.07"
     comment: "Attending ICML-26, and sightseeing."
+    photo: "/assets/images/cert/FELLOW.jpg"
     emoji: "🇰🇷"
