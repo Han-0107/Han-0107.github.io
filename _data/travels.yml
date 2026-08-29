@@ -120,3 +120,31 @@ places:
     date: "2026.04"
     comment: "Sightseeing, Piazza San Marco, Lido, etc!"
     emoji: "🇮🇹"
+
+  - name: "Las Vegas"
+    lat: 36.1699
+    lng: -115.1398
+    date: "2026.07"
+    comment: "Casinos, Guns, Shopping"
+    emoji: "🇺🇸"
+
+  - name: "Los Angeles"
+    lat: 34.0522
+    lng: -118.2437
+    date: "2026.07"
+    comment: "Griffith Observatory, Shopping"
+    emoji: "🇺🇸"
+
+  - name: "Long Beach"
+    lat: 33.7701
+    lng: -118.1937
+    date: "2026.07"
+    comment: "Attending DAC-26."
+    emoji: "🇺🇸"
+
+  - name: "Seoul"
+    lat: 37.5665
+    lng: 126.9780
+    date: "2026.07"
+    comment: "Attending ICML-26, and sightseeing."
+    emoji: "🇰🇷"
