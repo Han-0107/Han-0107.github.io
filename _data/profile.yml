@@ -46,7 +46,8 @@ experience:
 - name: Huawei 2012 Laboratory
   logo: /assets/images/badges/Huawei.png
   position: >- 
-    On-site Staff
+    On-site Staff</br>
+    Developed an LLM-based chip design tool and deployed it in real applications.
   date: Apr. 2025 - Aug. 2026
 - name: The Chinese University of Hong Kong, Shenzhen
   logo: /assets/images/badges/CUHK.svg
