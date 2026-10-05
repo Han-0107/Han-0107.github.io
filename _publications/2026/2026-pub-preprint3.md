@@ -2,11 +2,11 @@
 title:          "AgenticPD: A Stage-Aware Agentic Framework for Physical Design QoR Optimization"
 date:           2026-07-11
 selected:       false
-pub:            "arxiv"
+pub:            "ASP-DAC"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_date:       "2026"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Preprint</span>'
+pub_last:       '<span class="badge badge-pill badge-publication badge-success">CCF-C Conference</span>'
 
 # abstract: >-
 #   A combined navigation system for efficient collaboration between BDS and INS built through RISC-V-based architecture.
