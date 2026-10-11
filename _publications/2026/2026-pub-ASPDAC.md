@@ -2,7 +2,7 @@
 title:          "AgenticPD: A Stage-Aware Agentic Framework for Physical Design QoR Optimization"
 date:           2026-07-11
 selected:       false
-pub:            "ASP-DAC"
+pub:            "Asia and South Pacific Design Automation Conference (<strong>ASP-DAC</strong>)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_date:       "2026"
