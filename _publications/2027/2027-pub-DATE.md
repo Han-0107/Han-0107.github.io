@@ -6,7 +6,7 @@ pub:            "Design, Automation and Test in Europe Conference (<strong>DATE<
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_date:       "2026"
-pub_last:       '<span class="badge badge-pill badge-publication badge-success">CCF-C Conference</span>'
+pub_last:       '<span class="badge badge-pill badge-publication badge-success">CCF-B Conference</span>'
 
 # abstract: >-
 #   A combined navigation system for efficient collaboration between BDS and INS built through RISC-V-based architecture.
