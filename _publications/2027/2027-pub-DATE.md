@@ -10,7 +10,7 @@ pub_last:       '<span class="badge badge-pill badge-publication badge-success">
 
 # abstract: >-
 #   A combined navigation system for efficient collaboration between BDS and INS built through RISC-V-based architecture.
-cover: /assets/images/covers/PD.png
+cover: /assets/images/covers/DATE27.png
 authors:
   - Shuo Ren
   - Shixi Chen
